@@ -1,108 +1,281 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Milestone Project 4
+---
+## Purpose
 
-Welcome USER_NAME,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+This site was designed for the fourth milestone project in Full Stack Software Development with the Code Institute, based on the learnings from HTML, CSS, Python and Flask Framework as Backend and MongoDB as the database.
+![Site Mockup](static/images/Multi-device.PNG "Site Mockup")
 
 ---
 
-Happy coding!
+## Vitality Physio
+The idea for this project is all based around a Physiotherapy practice, with the site showcasing the range of services and treatments that they offer. Users will have the ability to pre-purchase and pay for these services online, with registered users being able to avail of a discount. The site will also provide a contact page to submit any queries they may have and a reviews page to provide feedback of the business and its services. 
+
+ The live website can be found here: https://
+
+---
+
+
+## Table of Contents
+* [User Experience(UX)](#User-Experience)
+    * [User Stories](#User-Stories)
+    * [Structure](#Structure)
+        * [Database Schema](#Database-Schema)
+    * [Design](#Design)
+        * [Colour Scheme](#Colour-Scheme)
+        * [Imagery](#Imagery)
+        * [Wireframes](#Wireframes)
+    * [Differences to Design](#Differences-to-Design)
+    * [Site Features](#Site-Features)
+        * [Features to be Implemented in Future](#Features-to-be-Implemented-in-Future)
+* [Technologies Used](#Technologies-Used)
+* [Testing](#Testing)
+* [Deployment](#Deployment)
+    * [GitHub Project Creation](#GitHub-Project-Creation)
+    * [Deploy with GitHub Pages](#Deploy-with-Github-Pages)
+    * [Locally](Run-Locally)
+
+* [Credits](#Credits)
+* [Acknowledgements](#Acknowledgements)
+
+
+ The live website can be found here: https://
+
+
+---
+### User Experience (UX)
+
+#### User Stories:
+*As a Guest User:*
+*   I want to immediately understand the nature of the site and learn more about the services that they provided.
+*	I want to be able to easily navigate through the site, with the structure of the content easy to follow.
+*	I want to be able to access the site from all device types.
+*	I want to easily see the treatments and services offered.
+*	I want to easily be able to register.
+*	I want to be able to easily add my details.
+*	I want to be able to contact the Company with any questions I may have in regards treatments and services.
+
+
+*Registered User:*
+*	I want to be able to log onto the website and see my purchase history.
+*	I want to be able to edit my details.
+*	I want to be easily able to log out of my account.
+*	I want to be able to reset my password if it is forgotten.
+
+*Any User:*
+*	I want to be able to add items to my shopping cart.
+*	I want to be able to remove items from my shopping cart.
+*	I want to be able to view my shopping cart and see all items in the cart with price and totals displayed.
+*	I want to enter my payment details for purchase of items.
+*	I want to be able to reset my password if it is forgotten.
+*	I want to get a confirmation email of my purchase.
+
+*Site Owner:*
+
+*	I want to be able to add and remove services on offer to ensure the site is up to date.
+*	I want to be easily able edit the details, price and images for services.
+
+
+
+## Structure:
+
+
+Below is a Site diagram that I used as a basis for the structure of the project:
+
+![Site Structure](static/ "Site Structure Diagram")
+
+#### Database Schema:
+
+Below is the database schema that I devised for the project:
+
+![Database Schema]( "Database Schema")
+
+
+
+## Design:
+
+#### Colour scheme: 
+The colour scheme for the site consists red, white and light grey. The red will be used for the Vitality Physio logo and will carry the branding throughout the site. The red is used both as background for certain sections and as a font colour in others, so that it is a subtle effect rather than an overwelming red theme across the site. The red will be contrasted with light greys and white, which will help it stand out.
+
+
+
+#### Imagery:
+
+ 
+
+
+#### Wireframes:
+
+Here are the wireframes that I used as the basis of the design
+for the site. These were created using [Balsamiq](https://balsamiq.com//).
+
+##### Home Page
+
+![Wireframe mockup](static/images/wireframes/HomePage.png "Wireframe mockup")
+
+##### Log In Page
+
+![Wireframe mockup](static/images/wireframes/LogInPage.png "Wireframe mockup")
+
+##### Register Page
+
+![Wireframe mockup](static/images/wireframes/RegisterPage.png "Wireframe mockup")
+
+##### Profile Page
+
+![Wireframe mockup](static/images/wireframes/ProfilePage.png "Wireframe mockup")
+
+
+ For the pfd version of the wireframes click [here.](https://)
+ 
+
+### Differences to Design
+
+
+
+
+## Site Features
+
+Home Page – Details on the business with some details on services and treatments provided
+Log in Page – 
+Register Page – 
+Profile Page – Contains user address and purchase history
+Services Page – Display of the Treatments and Classes available
+Services Details Page – Display details of a selected Treatment or Class
+Class Timetable Page – Timetable of classes for the week
+Contact Page – 
+Services Admin Page – Site Owner access only. Page for editing or adding treatments and classes for purchase.
+Reviews Page – Display the reviews that customers have provided for the company and its services.
+
+
+### Features to be Implemented in Future
+
+* 
+
+
+---
+## Technologies Used
+* [HTML5](https://en.wikipedia.org/wiki/HTML5) -  HTML is the main language used for the structure of the site.
+* [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - Custom written CSS is used to style the site.
+* [Materialize](https://materializecss.com/) – The layout and styling of the site was helped by the use of Materialize framework.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Utilized for form validation
+* [jQuery](https://jquery.com/) - Used for various Materialize components such as, Datepicker, Timepicker, Dropdown menu, side navbar, parallax image and modal.
+* [Python](https://www.python.org/) - Python is used as the back-end programming language.
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/) - Python microframework Flask is used to create this project.
+* [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) - Jinja templating language is used with Flask in the HTML code.
+* [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) - Werkzeug is used for password hashing and authentication and autohorization.
+* [MobgoDB](https://www.mongodb.com/1) - Database used to create the document based collections for the data storage of this site.
+* [Heroku](https://dashboard.heroku.com/) - Hosting platform to deploy the live site.
+* [Font Awesome](https://fontawesome.com/) – Was used to obtain the social media icons used.
+* [Balsamiq](https://balsamiq.com//)Balsamiq – Was used to create the wireframes of the site on the various devices.
+* [Adobe Photoshop Express](https://www.adobe.com/ie/photoshop/online/resize-image.html) - Used to resize images used on the site. 
+* [Git](https://git-scm.com/) - Git is used for the version control of changes throughout the project.
+* [Gitpod](https://www.gitpod.io/) – was used as the coding space for the project.
+* [GitHub](https://github.com/) - was used to host the project files and publish the live website by using Git Pages.
+* [Autoprefixer](https://autoprefixer.github.io/) - was used to parse  CSS and add vendor prefixes to CSS rules.
+* [W3C Markup Validation Service](https://validator.w3.org/) - W3C Markup Validation Service is used to check whether there were any errors in the HTML5 code.
+* [W3C CSS validator](https://jigsaw.w3.org/css-validator/) - The W3C CSS validator is used to check whether there were any errors in the CSS3 code.
+* [JShint](https://jshint.com/) - JavaScript validator that is used to check whether there were any errors in the JavaScript code.
+* [PEP8](http://pep8online.com/) - The PEP8 validator is used to check whether there were any errors in the Python code.
+* [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) – was used extensively during coding to check the responsiveness of the site with the addition of new features.
+---
+
+# Testing
+
+The testing process can be found [here](TESTING.md)
+
+
+
+# Deployment
+
+##  GitHub Project Creation
+To create the project the following steps were used:
+
+* In GitHub repositories section click the green 'New' button 
+* Select the Code Institute template
+* Name the repository and give a brief description
+* Set repository to 'Public' to ensure the commit history is visible
+* Click 'Create repository'
+* Once created the workspace is built in Gitpod by clicking the Gitpod button.
+
+
+## Deploy to Heroku
+The website was deployed as follows:
+
+* Navigate to Heroku.com and login.
+* Click on the new button.
+* Select create new app.
+* Enter the app name.
+* Select region.
+
+Set up connection to Github Repository:
+
+* Click the deploy tab and select GitHub - Connect to GitHub.
+* A prompt to find a github repository to connect to will then be displayed.
+* Enter the repository name for the project and click search.
+* Once the repo has been found, click the connect button.
+
+Set environment variables:
+
+Click the settings tab and then click the Reveal Config Vars button and add the following:
+* key: IP, value: 0.0.0.0
+* key: PORT, value: 5000
+* key: MONGO_DBNAME, value: (database name you want to connect to)
+* key: MONGO_URI, value: (mongo uri - This can be found in MongoDB by going to clusters > connect > connect to your application and substituting the password and dbname that you set up in the link).
+* key: SECRET_KEY, value: (This is a custom secret key set up for configuration to keep client-side sessions secure).
+
+Enable automatic deployment:
+
+* Click the Deploy tab
+* In the Automatic deploys section, choose the branch you want to deploy from then click Enable Automation Deploys.
+
+
+## Run Locally
+
+To run the code locally:
+
+* Navigate to the repository
+* Click the 'Code' drop down menu
+* Select to copy the GitHub URL from HTTPS box or 'Download Zip'
+* Open a new terminal and type 'git clone' command in the CLI and paste copied URL
+* Alternatively, click 'Open with GitHub Desktop' and follow the steps to complete the clone
+
+Once the project has been loaded, run the command 
+> pip install -r requirements.txt 
+
+  to install all the required packages.
+
+The project will not run locally with database connections unless the user sets up an env.py file configuring 
+IP, PORT, MONGO_URI, MONGO_DBNAME and SECRET_KEY. You must have the connection details in order to do this. 
+These details are private and not disclosed in this repository for security purposes.
+
+
+---
+
+
+# Credits
+
+### Media
+
+
+
+
+
+  
+### Code
+
+
+
+* The Boutique Ado walk through project by Code Institute was used as an excellent starting point for this project. Much of the structure of the project was based around this and was adapted, 
+modified and expanded to suit the functionality of the porject.
+
+
+
+---
+
+# Acknowledgments
+
+* My Mentor, Precious Ijege , for his feedback and support throughout the project.
+
+* The Slack community for their support, encouragement and assistance in finding answers 
+to my project problems.
