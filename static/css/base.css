@@ -50,7 +50,7 @@ hr.divider {
 /* Code for centering text on hero image: https://www.w3schools.com/howto/howto_css_hero_image.asp */
 .hero-image {
    
-    background: url("/assets/images/hero.jpg");   
+    background: url("/media/hero.jpg");   
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -79,7 +79,7 @@ hr.divider {
 
 .hero-img {
    
-    background-image: url("/assets/images/hero3.jpg");   
+    background-image: url("/media/hero3.jpg");   
     background-position: right;
     background-repeat: no-repeat;  
 
