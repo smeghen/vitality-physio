@@ -1,0 +1,113 @@
+html {
+    height: 100%;
+}
+
+/* ------------------------------- Product Details Page */
+
+.product-details{
+    background-color: rgb(201, 201, 201);
+}
+
+.btn-white{
+    background: honeydew;
+}
+
+.btn-white:hover,
+.btn-white:active,
+.btn-white:focus {
+    background: black;
+    color: honeydew;
+}
+
+
+.page-section{
+    background-color:#d62a2a;
+    color: white;
+    padding-top: 1rem;
+}
+
+.page-section-white{
+    background-color: white;
+    color: black;
+    padding-top: 1rem;
+}
+
+
+hr.divider {
+    height: 0.2rem;
+    max-width: 3.25rem;
+    margin: 1.5rem auto;
+    background-color: #BF1313;
+    opacity: 1;
+}
+
+.icon{
+    font-size: 2.0rem;
+}
+
+/*---- Hero Image ----*/
+
+/* Code for centering text on hero image: https://www.w3schools.com/howto/howto_css_hero_image.asp */
+.hero-image {
+   
+    background: url("/assets/images/hero.jpg");   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 250pxx;
+    position: relative;
+    padding-top: 100rem;
+    opacity: 0.9;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #BF1313;
+  }
+
+  .masthead {
+    background-color: #fff;
+    height: 400px;
+    width: 100%;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+}
+
+.hero-img {
+   
+    background-image: url("/assets/images/hero3.jpg");   
+    background-position: right;
+    background-repeat: no-repeat;  
+
+}
+
+.red-text {
+    color: #BF1313;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.top-nav{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.card-img-size {
+    width: 100%;
+    height: 30vh;
+    object-fit: contain;    
+}
