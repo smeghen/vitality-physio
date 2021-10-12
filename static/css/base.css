@@ -111,3 +111,7 @@ hr.divider {
     height: 30vh;
     object-fit: contain;    
 }
+
+.header-container {
+    padding-top: 164px;
+}
