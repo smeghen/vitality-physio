@@ -98,6 +98,10 @@ hr.divider {
     padding-right: 0px;
 }
 
+.nav-icon{
+    color: rgba(0,0,0,.5);
+}
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -114,4 +118,8 @@ hr.divider {
 
 .header-container {
     padding-top: 164px;
+}
+
+.img-fluid-logo {
+    height: auto;
 }
