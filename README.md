@@ -184,6 +184,9 @@ Reviews Page – Display the reviews that customers have provided for the compan
 
 The testing process can be found [here](TESTING.md)
 
+# Issues Encountered
+
+* When working on products.html in the products app I had difficulty getting the product images to display. After checking numerous options and searching for spelling mistakes, the answer was found on Slack. I was missing the 'django.template.context_processors.media', in the TEMPLATE 'context_processors' in settings.py.
 
 
 # Deployment
