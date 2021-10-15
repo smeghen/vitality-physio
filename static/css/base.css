@@ -117,11 +117,25 @@ hr.divider {
 }
 
 .header-container {
-    padding-top: 164px;
+    padding-top: 233px;
 }
 
 .img-fluid-logo {
     height: auto;
+}
+
+/* Back to top button on products page*/
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
