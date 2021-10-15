@@ -123,3 +123,14 @@ hr.divider {
 .img-fluid-logo {
     height: auto;
 }
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 768px) {
+    .header-container {
+        padding-top: 233px;
+    }
+
+    body {
+        height: calc(100vh - 233px);
+    }
+}
