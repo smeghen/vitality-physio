@@ -19,18 +19,36 @@
     </div>
 
   
-    <div class="col-sm-7">
+    
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 col-lg-4 offset-md-2">
                 <form action="{% url 'contact' %}" method="POST">
                     {% csrf_token %}
                     {% for field in form %}
                         {{ field | as_crispy_field}}
                     {% endfor %}
-                    <input type="submit" value="Submit" class="btn btn-contact">
+                    <input type="submit" value="Submit" class="btn btn-danger rounded-0 btn-lg">
                 </form>
             </div>
+        
+        <div class="col-12 col-lg-4 offset-md-2">
+            <h4 class="mb-2">Location</h4>
+            <p>
+                Unit 16, Carrick Business Park<br>
+                Carrick-on-Shannon<br>
+                Co. Leitrim,
+                Ireland</p>
+            <p><i class="fas fa-phone-volume fa-lg"></i><strong> +353 71 999333 </strong><br></p>
+            <p><i class="fas fa-clock fa-lg"></i><strong>  Opening Hours </strong><br><br>
+                Monday: 9am – 9pm <br>
+                Tuesday: 9am – 9pm <br>
+                Wednesday: 9am – 9pm <br>
+                Thursday: 9am – 9pm <br>
+                Friday: 9am – 9pm <br>
+            </div>
+
         </div>
-    </div>
+    
+
 
 {% endblock %}
