@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col">
                     <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless table-hover table-light .w-auto">
+                        <table class="table table-sm table-borderless table-hover table-light">
                             <thead class="text-danger thead-dark">
                                 <tr>
                                     <th scope="col">Email</th>
@@ -36,7 +36,8 @@
                     </div>
                     <tr>
                         {% for contact in contacts %}
-                        <td>{{ contact.email }}</td>
+                        <td class="py-3">
+                            <p class="my-0">{{ contact.email }}</p>
                         <td class="py-3">
                             <p class="my-0">{{ contact.subject }}</p>
                         </td>
