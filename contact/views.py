@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .forms import ContactForm
+
+from .models import Contact
 
 
 def contact(request):
@@ -25,3 +28,19 @@ def contact(request):
     }
 
     return render(request, 'contact/contact.html', context)
+
+
+@login_required
+def view_contact(request):
+    """ View contacts made by customers """
+    contacts = Contact.objects.all()
+
+    if not request.user.is_superuser:
+
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    else:
+        context = {'contacts': contacts, }
+
+    return render(request, 'contact/view_contact.html', context)
