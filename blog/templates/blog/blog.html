@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <hr>
+                <h2 class="logo-font mb-4">Vitality Physio Blogs</h2>
+                <hr>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                    <div class="table-responsive rounded">
+                        <table class="table table-sm table-borderless table-hover table-light">
+                            <thead class="text-danger thead-dark">
+                                <tr>
+                                    <th scope="col">Author</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Content</th>
+                                    
+                                </tr>
+                            </thead>
+                    </div>
+                    <tr>
+                        {% for blog in blogs %}
+                        <td class="py-3">
+                            <p class="my-0">{{ blog.author }}</p>
+                        </td>    
+                        <td class="py-3">
+                            <p class="my-0">{{ blog.subject }}</p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">{{ blog.content}}</p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

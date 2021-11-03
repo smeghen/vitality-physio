@@ -7,5 +7,5 @@ class BlogForm(forms.ModelForm):
     Form for Blog model that uses all fields
     """
     class Meta:
-        model = Contact
+        model = Blog
         fields = ['author', 'subject', 'content']

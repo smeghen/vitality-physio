@@ -14,7 +14,7 @@ def blog(request):
         'blogs': blogs,
     }
 
-    return render(request, 'blogs/blogs.html', context)
+    return render(request, 'blog/blog.html', context)
 
 
 @login_required
@@ -27,14 +27,14 @@ def add_blog(request):
     if request.method == 'POST':
         form = BlogForm(request.POST, request.FILES)
         if form.is_valid():
-            blog = form.save()
+            form.save()
             messages.success(request, 'Successfully added blog!')
-            return redirect(reverse('add_blog', args=[blog.id]))
+            return redirect(reverse('home'))
         else:
             messages.error(request, 'Failed to add blog. Please ensure the form is valid.')
     else:
         form = BlogForm()
-        
+
     template = 'blog/add_blog.html'
     context = {
         'form': form,
