@@ -221,6 +221,13 @@ hr.divider {
 	color: #17a2b8; /* text-info */
 }
 
+/* Code for scrolling content of bootstrap card found on Stackoverflow: https://stackoverflow.com/questions/49818715/scrollable-card-bootstrap*/
+
+.scroll {
+    max-height: 30rem;
+    overflow-y: auto;
+}
+
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 768px) {
     .header-container {

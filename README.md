@@ -272,6 +272,8 @@ These details are private and not disclosed in this repository for security purp
 * The Boutique Ado walk through project by Code Institute was used as an excellent starting point for this project. Much of the structure of the project was based around this and was adapted, 
 modified and expanded to suit the functionality of the porject.
 
+* Code for scrolling content of bootstrap card found on Stackoverflow and modified to meet my needs: https://stackoverflow.com/questions/49818715/scrollable-card-bootstrap
+
 
 
 ---
