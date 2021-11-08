@@ -276,7 +276,7 @@ hr.divider {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 1824px) {
     .header-container {
-        padding-top: 300px;
+        padding-top: 450px;
     }
 }
 
