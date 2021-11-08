@@ -16,8 +16,9 @@
             <div class="col-sm-6 px-2">
                 <h1 class="red-text font-weight-bold">Vitality Physio</h1>
                     <p class="red-text font-weight-bold">  A centre where we adopt a big focus on your health, whether your goal is to get fit, loose weight or heal a nagging injury;
-                        we can provide you with the solution to better health and wellbeing.</p>
-             </div>
+                        we can provide you with the solution to better health and wellbeing.
+                    </p>
+            </div>
         </div>
     </div>
 </section>
@@ -33,59 +34,41 @@
                 <div class="row">
                     <div class="col-sm col-md-4 col-lg-4 py-3">
                         <p class="card-text text-danger"><strong>Shockwave Therapy</strong></p>
-                        <a href="#" title="Shockwave" target="_blank" >
+                        <a href="{% url 'products' %}?category=Physiotherapy" title="Shockwave" >
                             <img class="img-fluid img-thumbnail img-home" src="/media/shockwave.jpg" alt="Shockwave Therapy" />
-                            <div class="portfolio-box-caption">
-                            
-                            </div>
                         </a>
                     </div>
                     <div class="col-sm col-md-4 col-lg-4 py-3">
                         <p class="card-text text-danger"><strong>Sports Injury</strong></p>
-                        <a href="#" title="Sports Injuries" target="_blank">
+                        <a href="{% url 'products' %}?category=Physiotherapy" title="Sports Injuries">
                             <img class="img-fluid img-thumbnail img-home" src="/media/sports-injury.jpg" alt="Sports Injuries" />
-                            <div class="portfolio-box-caption">
-                                
-                            </div>
                         </a>
                     </div>
                     <div class="col-sm col-md-4 col-lg-4 py-3">
                         <p class="card-text text-danger"><strong>Dry Needling</strong></p>
-                        <a href="#" title="Dry Needling" target="_blank" >
+                        <a href="{% url 'products' %}?category=Physiotherapy" title="Dry Needling">
                             <img class="img-fluid img-thumbnail img-home" src="/media/dry-needling.jpg" alt="Dry needling" />
-                            <div class="portfolio-box-caption">
-                            
-                            </div>
                         </a>
                     </div>
                     <div class="col-sm col-md-4 col-lg-4 py-3">
                         <p class="card-text text-danger"><strong>Sports Massage</strong></p>
-                        <a href="#" title="Sports Massage" target="_blank" >
+                        <a href="{% url 'products' %}?category=Physiotherapy" title="Sports Massage">
                             <img class="img-fluid img-thumbnail img-home" src="/media/sports-massage.jpg" alt="Sports Massage" />
-                            <div class="portfolio-box-caption">
-                            
-                            </div>
                         </a>
                     </div>
                     <div class="col-sm col-md-4 col-lg-4 py-3">
                         <p class="card-text text-danger"><strong>Neck/Back Pain</strong></p>
-                        <a href="#" title="neck-pain" target="_blank" >
+                        <a href="{% url 'products' %}?category=Physiotherapy" title="neck-pain">
                             <img class="img-fluid img-thumbnail img-home" src="/media/neck-pain.jpg" alt="Neck/Back Pain" />
-                            <div class="portfolio-box-caption">
-                                
-                            </div>
                         </a>
                     </div>
                     <div class="col-sm col-md-4 col-lg-4 py-3">
                         <p class="card-text text-danger"><strong>Manual Therapy</strong></p>
-                        <a href="#" title="Manual Therapy" target="_blank" >
+                        <a href="{% url 'products' %}?category=Physiotherapy" title="Manual Therapy">
                             <img class="img-fluid img-thumbnail img-home" src="/media/manual-therapy.jpg" alt="Manual Therapy" />
-                            <div class="portfolio-box-caption">
-                                
-                            </div>
                         </a>
                     </div>
-                
+                </div>
             </div>
         </div>
     </div>
@@ -98,70 +81,53 @@
             <div class="col-lg-12 text-center">
                 <h2 class="text-black mt-0">Classes</h2>
                 <hr class="divider divider-light" />
-            <div>
-                <div class="row">
-                    <div class="col-sm col-lg-4 py-3 offset-lg-2">
-                        <p class="card-text text-danger"><strong>Yoga</strong></p>
-                        <a href="#" title="Yoga" target="_blank" >
-                            <img class="img-fluid img-thumbnail img-home" src="/media/yoga-class.jpg" alt="Yoga Classes" />
-                            <div class="portfolio-box-caption">
-                            
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm col-lg-4 py-3">
-                        <p class="card-text text-danger"><strong>Pilates</strong></p>
-                        <a href="#" title="Pilates" target="_blank">
-                            <img class="img-fluid img-thumbnail img-home" src="/media/pilates-class.jpg" alt="Pilates Classes" />
-                            <div class="portfolio-box-caption">
-                                
-                            </div>
-                        </a>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-sm col-lg-4 py-3 offset-lg-2">
+                    <p class="card-text text-danger"><strong>Yoga</strong></p>
+                    <a href="{% url 'products' %}?category=Yoga,Pilates" title="Yoga" >
+                        <img class="img-fluid img-thumbnail img-home" src="/media/yoga-class.jpg" alt="Yoga Classes" />
+                    </a>
+                </div>
+                <div class="col-sm col-lg-4 py-3">
+                    <p class="card-text text-danger"><strong>Pilates</strong></p>
+                    <a href="{% url 'products' %}?category=Yoga,Pilates" title="Pilates">
+                        <img class="img-fluid img-thumbnail img-home" src="/media/pilates-class.jpg" alt="Pilates Classes" />
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-        <!--                       Healthcare Providers   -->
-        <section class="page-section " id="healthcare">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">Covered by Healthcare Providers</h2>
-                        <hr class="divider divider-light" />
-                    <div>
-                        <div class="row">
-                            <div class="col-sm col-lg-4 my-1">
-                                <a href="https://www.layahealthcare.ie/" title="Laya Healthcare" target="_blank" >
-                                    <img class="img-fluid img-thumbnail" src="/media/laya-healthcare-logo.jpg" alt="laya-healthcare-logo" />
-                                    <div class="portfolio-box-caption">
-                                    
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm col-lg-4 my-1">
-                                <a href="https://www.irishlifehealth.ie/" title="Irish Life Health" target="_blank">
-                                    <img class="img-fluid img-thumbnail" src="/media/irish-life-health-logo.jpg" alt="irish-life-logo" />
-                                    <div class="portfolio-box-caption">
-                                        
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm col-lg-4 my-1">
-                                <a href="https://www1.vhi.ie/" title="VHI Healthcare" target="_blank" >
-                                    <img class="img-fluid img-thumbnail" src="/media/vhi-logo.jpg" alt="vhi-healthcare-logo" />
-                                    <div class="portfolio-box-caption">
-                                    
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+<!--                       Healthcare Providers   -->
+<section class="page-section " id="healthcare">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="text-white mt-0">Covered by Healthcare Providers</h2>
+                <hr class="divider divider-light" />
+            </div>
+            <div class="row">
+                <div class="col-sm col-lg-4 my-1">
+                    <a href="https://www.layahealthcare.ie/" title="Laya Healthcare" target="_blank" >
+                        <img class="img-fluid img-thumbnail" src="/media/laya-healthcare-logo.jpg" alt="laya-healthcare-logo" />
+                    </a>
+                </div>
+                <div class="col-sm col-lg-4 my-1">
+                    <a href="https://www.irishlifehealth.ie/" title="Irish Life Health" target="_blank">
+                        <img class="img-fluid img-thumbnail" src="/media/irish-life-health-logo.jpg" alt="irish-life-logo" />
+                    </a>
+                </div>
+                <div class="col-sm col-lg-4 my-1">
+                    <a href="https://www1.vhi.ie/" title="VHI Healthcare" target="_blank" >
+                        <img class="img-fluid img-thumbnail" src="/media/vhi-logo.jpg" alt="vhi-healthcare-logo" />
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
  <!-- Back to top button -->
  <div class="btt-button shadow-sm rounded-0 border border-black">
