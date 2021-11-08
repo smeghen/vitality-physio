@@ -132,6 +132,38 @@
     {% block content %}
     {% endblock %}
 
+    <div class="container-fluid bg-footer">
+        <div class="row">
+           <div class="col container-footer footer-text text-center">
+              <p> &copy Vitality Physio 2021.</p>
+           </div>
+           </div>
+           <div class="row align-items-center">
+           <div class="col footer-icons">
+            <a href="{% url 'contact' %}"  id="contact"
+            ><i class="fas fa-envelope-square"
+            ><span class="sr-only">Contact Us</span></i
+            ></a
+            >
+              <a href="https://www.facebook.com" target="_blank"
+                 ><i class="fab fa-facebook-square"
+                 ><span class="sr-only">Facebook</span></i
+                 ></a
+                 >
+              <a href="https://twitter.com" target="_blank"
+                 ><i class="fab fa-twitter-square"
+                 ><span class="sr-only">Twitter</span></i
+                 ></a
+                 >
+              <a href="https://www.instagram.com" target="_blank"
+                 ><i class="fab fa-instagram-square"
+                 ><span class="sr-only">Instagram</span></i
+                 ></a
+                 >
+           </div>
+        </div>
+     </div>
+
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
