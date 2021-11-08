@@ -238,6 +238,11 @@ hr.divider {
 
 /*---- Footer ----*/
 
+.footer{
+    padding-bottom: 20px;
+    width: 100%;
+}
+
 .bg-footer{
     background-color: rgb(228, 227, 227);
     color: black;
@@ -269,26 +274,24 @@ hr.divider {
   }
 
 /* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 1200px) {
+@media (max-width: 1824px) {
     .header-container {
         padding-top: 300px;
     }
+}
 
-@media (max-width: 992px) {
+@media (max-width: 930px) {
     .header-container {
-        padding-top: 360px;
+        padding-top: 450px;
     }
-
-@media (max-width: 860px) {
-    .header-container {
-        padding-top: 380px;
-    }
+}
 
 @media (max-width: 768px) {
     .header-container {
-        padding-top: 280px;
+        padding-top: 250px;
     }
 
     body {
         height: calc(100vh - 360px);
     }
+} 

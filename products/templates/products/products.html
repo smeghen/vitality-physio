@@ -11,17 +11,18 @@
 
 {% block content %}
 <div class="overlay"></div>
+<div class="container">
     <div class="row">
-        <div class="col text-center mt-3">
-            <h2 class="logo-font">Products</h2>
-
+        <div class="col-12 col-md-6">
+            <h2 class="logo-font">Products, Treatments & Classes</h2>
+    </div>
     </div>
 <div>
     <div class="row">
     <div class="col-12 col-md-6 order-md-first">
         <p class="text-muted mt-3 text-center text-md-left">
             {% if search_term != 'None_None' %}
-                <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                <span class="small"><a href="{% url 'products' %}">Back</a> | </span>
             {% endif %}
             {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
         </p>
@@ -82,6 +83,8 @@
             <i class="fas fa-arrow-up text-danger mx-auto my-auto"></i>
         </a>	
     </div>
+</div>
+</div>
     {% endblock %}
     
     {% block postloadjs %}
