@@ -19,7 +19,7 @@ def blog(request):
 
 @login_required
 def add_blog(request):
-    """ Add a blog to the store """
+    """ Add a blog to the site """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -70,3 +70,18 @@ def edit_blog(request, blog_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_blog(request, blog_id):
+    """ Delete a Blog from the site """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    blog = get_object_or_404(Blog, pk=blog_id)
+    blog.delete()
+    messages.success(request, 'Blog deleted!')
+    return redirect(reverse('blog'))
+
+

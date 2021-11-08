@@ -29,7 +29,7 @@
                     {% if request.user.is_superuser %}
                     <small class="my-5">
                         <a href="{% url 'edit_blog' blog.id %}">Edit</a> | 
-                        <a class="text-danger" href="#">Delete</a>
+                        <a class="text-danger" href="{% url 'delete_blog' blog.id %}">Delete</a>
                     </small>
                       {% endif %}
                   <h5 class="card-title">{{ blog.subject }}</h5>
