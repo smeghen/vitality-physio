@@ -2,6 +2,13 @@ html {
     height: 100%;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+body {
+  font-family: 'Noto Serif', serif;
+  letter-spacing: 2px;
+ }
+
 /* ------------------------------- Product Details Page */
 
 .product-details{
