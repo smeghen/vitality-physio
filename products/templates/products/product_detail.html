@@ -11,14 +11,12 @@
 
 {% block content %}
 <div class="overlay"></div>
-    <div class="row">
+<div class="row">
         <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
-
-        
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div class="product-details-container mb-5 mt-5 ml-3">
+                <div class="product-details-container mb-5 mt-5 ml-3 px-5 page-section-white">
                     <p class="lead mb-0 mt-5 font-weight-bold">{{ product.name }}</p>
                     <p class="mb-0">${{ product.price }}</p>
 
@@ -61,13 +59,13 @@
                             </div>
 
                             <div class="col{% if s %}-12 mt-2{% endif %}">
-                                <a href="{% url 'products' %}" class="btn btn-white rounded-0 mt-5">
+                                <a href="{% url 'products' %}" class="btn btn-white rounded-5 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Back</span>
                                 </a>
-                                <input type="submit" class="btn btn-danger rounded-0 text-uppercase mt-5" value="Add to Cart">
+                                <input type="submit" class="btn btn-danger rounded-5 text-uppercase mt-5" value="Add to Cart">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
@@ -88,7 +86,8 @@
                     {% endif %}
                 </div>
             </div>
-        </div>    
+        </div> 
+    </div>   
 </div>
 {% endblock %}
 
