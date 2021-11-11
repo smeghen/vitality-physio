@@ -13,7 +13,7 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 offset-md-3">
                 <hr>
                 <h2 class="logo-font mb-4">Contact Management</h2>
                 <h5 class="text-muted">View Customer Contacts</h5>
@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col">
                     <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless table-hover table-light">
+                        <table class="table table-sm table-bordered table-striped table-hover table-light">
                             <thead class="text-danger thead-dark">
                                 <tr>
                                     <th scope="col">Email</th>
@@ -33,7 +33,7 @@
                                     
                                 </tr>
                             </thead>
-                    </div>
+                            <tbody>
                     <tr>
                         {% for contact in contacts %}
                         <td class="py-3">
@@ -45,7 +45,10 @@
                             <p class="my-0">{{ contact.message }}</p>
                         </td>
                     </tr>
+                    </tbody>
                     {% endfor %}
+                    </table> 
+                </div>   
             </div>
         </div>
     </div>
