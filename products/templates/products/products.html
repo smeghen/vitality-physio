@@ -12,24 +12,21 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container">
-    <div class="row">
-        <div class="col-12 col-md-6">
-            <h2 class="logo-font">Products, Treatments & Classes</h2>
-        </div>
+
     </div>
 
     <div class="row">
-        <div class="col-12 col-md-6 order-md-first">
-            <p class="text-muted mt-3 text-center text-md-left">
-                {% if search_term != 'None_None' %}
-                    <span class="small"><a href="{% url 'products' %}">Back</a> | </span>
-                {% endif %}
-                {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+        <div class="col-12 col-md-6">
+            <p class=" mt-3 text-center">
+                {% for c in current_categories %}
+                    <h2 class="text-black mt-0 text-center">{{ c.name }}</h2>
+                {% endfor %}
             </p>
         </div>
     </div>
+   
 
-        <div class="row">
+        <div class="row page-section-grey">
             <div class="product-container col-10 offset-1">
                     <div class="row mt-1 mb-2"></div>
                 <div class="row"> 
