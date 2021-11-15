@@ -273,16 +273,34 @@ hr.divider {
      background: transparent;
   }
 
-/* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 1824px) {
+/* padding the top a bit when navbar is collapsed on mobile */
+@media (min-width: 1801px) {
     .header-container {
-        padding-top: 450px;
+        padding-top: 380px;
+    }
+}
+
+@media (max-width: 1800px) {
+    .header-container {
+        padding-top: 350px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .header-container {
+        padding-top: 300px;
+    }
+}
+
+@media (max-width: 1200px){
+    .header-container {
+        padding-top: 250px;
     }
 }
 
 @media (max-width: 930px) {
     .header-container {
-        padding-top: 450px;
+        padding-top: 300px;
     }
 }
 
