@@ -42,58 +42,58 @@
               <a href="{% url 'home' %}" class="nav-brand nav-link main-logo-link">
                   <img class="img-fluid-logo" src="/media/logo.png" alt="Vitality Physio">
               </a>
-              </div>
-              <div class="col-sm-8 col-lg-4">
-              <ul class="list-inline list-unstyled text-center text-lg-center my-0">
-                <li class="list-inline-item dropdown">
-                    <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <div class="text-center">
-                            <div><i class="fas fa-user fa-lg nav-icon"></i></div>
-                            <p class="my-0 nav-icon">My Account</p>
-                        </div>
-                    </a>
-                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                        {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                <a href="{% url 'view_contact' %}" class="dropdown-item">Contact Management</a>
-                                <a href="{% url 'add_blog' %}" class="dropdown-item">Blog Management</a>
-                            {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                        {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                        {% endif %}
-                    </div>
-                </li>
-                <li class="list-inline-item">
-                    <a class="{% if total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
-                        <div class="text-center">
-                            <div><i class="fas fa-shopping-bag fa-lg nav-icon"></i></div>
-                            <p class="my-0 nav-icon">
-                                {% if total %}
-                                    ${{ total|floatformat:2 }}
-                                {% else %}
-                                    $0.00
+            </div>
+            <div class="col-sm-8 col-lg-4">
+                <ul class="list-inline list-unstyled text-center text-lg-center my-0">
+                    <li class="list-inline-item">
+                        <a class="{% if total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag fa-lg nav-icon"></i></div>
+                                <p class="my-0 nav-icon">
+                                    {% if total %}
+                                        ${{ total|floatformat:2 }}
+                                    {% else %}
+                                        $0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-inline-item dropdown">
+                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <div><i class="fas fa-user fa-lg nav-icon"></i></div>
+                                <p class="my-0 nav-icon">My Account</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                    <a href="{% url 'view_contact' %}" class="dropdown-item">Contact Management</a>
+                                    <a href="{% url 'add_blog' %}" class="dropdown-item">Blog Management</a>
                                 {% endif %}
-                            </p>
+                                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            {% endif %}
                         </div>
-                    </a>
-                </li>
-            </ul>
+                    </li>
+                </ul>
           </div>
         </div>
-</div>
 
-    <div class="row bg-white border-bottom">
-        <nav class="navbar navbar-light w-100 text-center navbar-expand-md">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-           
-            {% include 'includes/main-nav.html' %}
-        </nav>
+
+        <div class="row bg-white border-bottom">
+            <nav class="navbar navbar-light w-100 text-center navbar-expand-md">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {% include 'includes/main-nav.html' %}
+            </nav>
+        </div>
   </header>
 
     {% if messages %}
@@ -125,29 +125,29 @@
            <div class="col container-footer footer-text text-center">
               <p> &copy Vitality Physio 2021.</p>
            </div>
-           </div>
-           <div class="row align-items-center">
+        </div>
+        <div class="row align-items-center">
            <div class="col footer-icons">
-            <a href="{% url 'contact' %}"  id="contact"
-            ><i class="fas fa-envelope-square"
-            ><span class="sr-only">Contact Us</span></i
-            ></a
-            >
-              <a href="https://www.facebook.com" target="_blank"
-                 ><i class="fab fa-facebook-square"
-                 ><span class="sr-only">Facebook</span></i
-                 ></a
-                 >
-              <a href="https://twitter.com" target="_blank"
-                 ><i class="fab fa-twitter-square"
-                 ><span class="sr-only">Twitter</span></i
-                 ></a
-                 >
-              <a href="https://www.instagram.com" target="_blank"
-                 ><i class="fab fa-instagram-square"
-                 ><span class="sr-only">Instagram</span></i
-                 ></a
-                 >
+                <a href="{% url 'contact' %}"  id="contact">
+                    <i class="fas fa-envelope-square">
+                    <span class="sr-only">Contact Us</span>
+                    </i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook-square">
+                    <span class="sr-only">Facebook</span>
+                    </i>
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <i class="fab fa-twitter-square">
+                    <span class="sr-only">Twitter</span>
+                    </i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram-square">
+                    <span class="sr-only">Instagram</span>
+                    </i>
+                </a>
            </div>
         </div>
      </div>
