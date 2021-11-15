@@ -59,14 +59,13 @@ hr.divider {
 /* Code for centering text on hero image: https://www.w3schools.com/howto/howto_css_hero_image.asp */
 .hero-image {
    
-    background: url("/media/hero.jpg");   
+    background: url("/media/hero4.jpg");   
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 250pxx;
     position: relative;
-    padding-top: 100rem;
-    opacity: 0.9;
+    padding-top: 10rem;
+    padding-bottom: 100rem;   
 }
 
 .hero-text {
@@ -80,17 +79,15 @@ hr.divider {
 
   .masthead {
     background-color: #fff;
-    height: 400px;
+    height: 400vh;
     width: 100%;
     padding-top: 12rem;
     padding-bottom: 12rem;
 }
 
-.hero-img {
-   
-    background-image: url("/media/hero3.jpg");   
-    background-position: right;
-    background-repeat: no-repeat;  
+.container-fluid {
+   padding-left: 0px !important;
+   padding-right: 0px !important;
 
 }
 
