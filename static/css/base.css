@@ -29,13 +29,20 @@ body {
 
 .page-section{
     background-color:#d62a2a;
-    color: white;
+    color: black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.page-section-grey{
+    background-color: rgb(228, 227, 227);
+    color: black;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
 .page-section-white{
-    background-color: rgb(228, 227, 227);
+    background-color: rgb(255, 255, 255);
     color: black;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -46,7 +53,7 @@ hr.divider {
     height: 0.2rem;
     max-width: 3.25rem;
     margin: 1.5rem auto;
-    background-color: #BF1313;
+    background-color: black;
     opacity: 1;
 }
 
@@ -135,6 +142,12 @@ hr.divider {
     width:  30rem;
     height: 30rem;
     object-fit: cover;
+}
+
+.img-thumbnail{
+    border: 0px !important;
+    border-radius: 2rem;
+    padding: 0px;
 }
 
 

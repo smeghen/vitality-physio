@@ -14,56 +14,77 @@
     <div class="container-fluid ">
         <div class="masthead bg-black hero-image h-100">
             <div class="col-sm-6 px-2">
-                <h1 class="red-text font-weight-bold">Vitality Physio</h1>
-                    <p class="red-text font-weight-bold">  A centre where we adopt a big focus on your health, whether your goal is to get fit, loose weight or heal a nagging injury;
-                        we can provide you with the solution to better health and wellbeing.
-                    </p>
+                
             </div>
         </div>
     </div>
 </section>
 
+ <!--                       About Section   -->
+ <section class="page-section-grey" id="about">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-sm-12 col-md-8">
+            <h1 class="font-weight-bold text-center">Welcome to Vitality Physio</h1>
+            <hr>
+                <p>  A centre where we adopt a big focus on your health, whether your goal is to get fit, loose weight or heal a nagging injury;
+                    we can provide you with the solution to better health and wellbeing.
+                </p>
+                <p>Our Chartered Phyisotherapists utilise a variety of treatments which are supported by research and are proven to get results.
+                </p>
+                <p>Please contact us with any queries you have about Treatments and Services that we offer.
+                </p>
+                <p class="text-center">
+                <a href="{% url 'contact' %}" class="btn btn-primary rounded-5 mt-5">
+                    <span class="text-uppercase">Contact Us</span>
+                </a>
+            </p>
+        </div>
+    </div>
+
+ </section>
+
  <!--                       Treatments Section   -->
- <section class="page-section-white " id="treatments">
+ <section class="page-section-white" id="treatments">
     <div>
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-12 text-center">
+                <hr class="divider divider-light" />
                 <h2 class="text-black mt-0">Physiotherapy Services</h2>
                 <hr class="divider divider-light" />
             <div>
                 <div class="row">
                     <div class="col-sm col-md-4 col-lg-4 py-3">
-                        <p class="text-danger"><strong>Shockwave Therapy</strong></p>
+                        <p><strong>Shockwave Therapy</strong></p>
                         <a href="{% url 'products' %}?category=Physiotherapy" title="Shockwave" >
                             <img class="img-fluid img-thumbnail img-home" src="/media/shockwave.jpg" alt="Shockwave Therapy" />
                         </a>
                     </div>
                     <div class="col-sm col-md-4 col-lg-4 py-3">
-                        <p class="text-danger"><strong>Sports Injury</strong></p>
+                        <p><strong>Sports Injury</strong></p>
                         <a href="{% url 'products' %}?category=Physiotherapy" title="Sports Injuries">
                             <img class="img-fluid img-thumbnail img-home" src="/media/sports-injury.jpg" alt="Sports Injuries" />
                         </a>
                     </div>
                     <div class="col-sm col-md-4 col-lg-4 py-3">
-                        <p class="text-danger"><strong>Dry Needling</strong></p>
+                        <p><strong>Dry Needling</strong></p>
                         <a href="{% url 'products' %}?category=Physiotherapy" title="Dry Needling">
                             <img class="img-fluid img-thumbnail img-home" src="/media/dry-needling.jpg" alt="Dry needling" />
                         </a>
                     </div>
                     <div class="col-sm col-md-4 col-lg-4 py-3">
-                        <p class="text-danger"><strong>Sports Massage</strong></p>
+                        <p><strong>Sports Massage</strong></p>
                         <a href="{% url 'products' %}?category=Physiotherapy" title="Sports Massage">
                             <img class="img-fluid img-thumbnail img-home" src="/media/sports-massage.jpg" alt="Sports Massage" />
                         </a>
                     </div>
                     <div class="col-sm col-md-4 col-lg-4 py-3">
-                        <p class="text-danger"><strong>Neck/Back Pain</strong></p>
+                        <p><strong>Neck/Back Pain</strong></p>
                         <a href="{% url 'products' %}?category=Physiotherapy" title="neck-pain">
                             <img class="img-fluid img-thumbnail img-home" src="/media/neck-pain.jpg" alt="Neck/Back Pain" />
                         </a>
                     </div>
                     <div class="col-sm col-md-4 col-lg-4 py-3">
-                        <p class="text-danger"><strong>Manual Therapy</strong></p>
+                        <p><strong>Manual Therapy</strong></p>
                         <a href="{% url 'products' %}?category=Physiotherapy" title="Manual Therapy">
                             <img class="img-fluid img-thumbnail img-home" src="/media/manual-therapy.jpg" alt="Manual Therapy" />
                         </a>
@@ -75,22 +96,23 @@
 </section>
 
 <!--                       Classes Section   -->
-<section class="page-section-white " id="classes">
+<section class="page-section-grey " id="classes">
    
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-12 text-center">
+                <hr class="divider divider-light" />
                 <h2 class="text-black mt-0">Classes</h2>
                 <hr class="divider divider-light" />
             </div>
             <div class="row">
                 <div class="col-sm col-lg-4 py-3 offset-lg-2">
-                    <p class="text-danger text-center"><strong>Yoga</strong></p>
+                    <p class="text-center"><strong>Yoga</strong></p>
                     <a href="{% url 'products' %}?category=Yoga,Pilates" title="Yoga" >
                         <img class="img-fluid img-thumbnail img-home" src="/media/yoga-class.jpg" alt="Yoga Classes" />
                     </a>
                 </div>
                 <div class="col-sm col-lg-4 py-3">
-                    <p class="text-danger text-center"><strong>Pilates</strong></p>
+                    <p class="text-center"><strong>Pilates</strong></p>
                     <a href="{% url 'products' %}?category=Yoga,Pilates" title="Pilates">
                         <img class="img-fluid img-thumbnail img-home" src="/media/pilates-class.jpg" alt="Pilates Classes" />
                     </a>
