@@ -16,10 +16,12 @@
     </div>
 
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12">
             <p class=" mt-3 text-center">
                 {% for c in current_categories %}
                     <h2 class="text-black mt-0 text-center">{{ c.name }}</h2>
+                {% empty %}
+                    <h2 class="text-black mt-0 text-center">All Products</h2>
                 {% endfor %}
             </p>
         </div>
