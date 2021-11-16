@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Shopping Cart</h2>
+                <h2 class="logo-font mb-4 text-center">Shopping Cart</h2>
                 <hr>
             </div>
         </div>
@@ -25,8 +25,8 @@
         <div class="row">
             <div class="col">
                 {% if cart_items %}
-                    <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless table-hover table-light">
+                    <div class="table-responsive rounded ">
+                        <table class="table table-sm table-bordered table-striped table-hover table-light">
                             <thead class="text-danger thead-dark">
                                 <tr>
                                     <th scope="col">Product</th>
@@ -39,6 +39,7 @@
                     </div>
 
                     {% for item in cart_items %}
+                    <tbody>
                     <tr>
                         <td class="p-3 w-25">
                             {% if item.product.image %}
@@ -53,7 +54,7 @@
                         <td class="py-3">
                             <p class="my-0">${{ item.product.price }}</p>
                         </td>
-                        <td class="py-3 w-25">
+                        <td class="py-3 w-10">
                             <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group">
@@ -66,7 +67,7 @@
                                                 </span>
                                             </button>
                                         </div>
-                                        <input class="form-control form-control-sm qty_input" type="number"
+                                        <input class="form-control form-control-sm qty_input text-center" type="number"
                                             name="quantity" value="{{ item.quantity }}" min="1" max="99"
                                             data-item_id="{{ item.item_id }}"
                                             id="id_qty_{{ item.item_id }}">
@@ -89,12 +90,13 @@
                             <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
+                </tbody>
                    {% endfor %}
                 </table>
                 
                    <div class="container mb-2">
                     <div class="row ">
-                        <div class="col-4 offset-8 bg-light border">
+                        <div class="col-3 offset-9 bg-light border text-center">
                             
                             <h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
                             
@@ -106,17 +108,14 @@
                         <div class="row">
                             <div class="col text-center">
                                
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                <a href="{% url 'products' %}" class="btn btn-white rounded-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
-                                    <span class="text-uppercase">Back</span>
+                                    <span>Back</span>
                                 </a>
                                 <a href="{% url 'checkout' %}" class="btn btn-danger rounded-5">
-                                    <span class="text-uppercase">Checkout</span>
-                                    <span class="icon">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </span>
+                                    <span>Checkout</span>
                                 </a>
                                 
                             </div>
