@@ -283,42 +283,10 @@ hr.divider {
      background: transparent;
   }
 
-/* padding the top a bit when navbar is collapsed on mobile */
-@media (min-width: 1801px) {
-    .header-container {
-        padding-top: 380px;
-    }
-}
+/* Remove hero image on smaller screen sizes */
 
-@media (max-width: 1800px) {
-    .header-container {
-        padding-top: 350px;
-    }
-}
-
-@media (max-width: 1600px) {
-    .header-container {
-        padding-top: 300px;
-    }
-}
-
-@media (max-width: 1200px){
-    .header-container {
-        padding-top: 250px;
-    }
-}
-
-@media (max-width: 930px) {
-    .header-container {
-        padding-top: 300px;
-    }
-}
 
 @media (max-width: 768px) {
-    .header-container {
-        padding-top: 250px;
-    }
-
     .hero-image {
         display: none;
     }
