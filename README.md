@@ -3,13 +3,13 @@
 ## Purpose
 
 
-This site was designed for the fourth milestone project in Full Stack Software Development with the Code Institute, based on the learnings from HTML, CSS, Python and Flask Framework as Backend and MongoDB as the database.
+This site was designed for the fourth milestone project in Full Stack Software Development with the Code Institute. The site is based around e-commerce using HTML, CSS, Javascript, JQuery, Python, Django Framework and Postgressql.
 ![Site Mockup](static/images/Multi-device.PNG "Site Mockup")
 
 ---
 
 ## Vitality Physio
-The idea for this project is all based around a Physiotherapy practice, with the site showcasing the range of services and treatments that they offer. Users will have the ability to pre-purchase and pay for these services online, with registered users being able to avail of a discount. The site will also provide a contact page to submit any queries they may have and a reviews page to provide feedback of the business and its services. 
+The idea for this project is all based around a fictional Physiotherapy practice called "Vitality Phyios", with the site showcasing the range of services and treatments that they offer. Users will have the ability to pre-purchase and pay for these services online, with registered users being able to avail of a discount and access to blogs posted by Physiotherapist on a range of topics. The site will also provide a contact page to submit any queries that users may have.
 
  The live website can be found here: https://
 
@@ -74,6 +74,8 @@ The idea for this project is all based around a Physiotherapy practice, with the
 
 *	I want to be able to add and remove services on offer to ensure the site is up to date.
 *	I want to be easily able edit the details, price and images for services.
+*   I want to be able to add, edit and remove blogs on the site.
+*   I want to be able to view all contacts made by users
 
 
 
@@ -95,7 +97,7 @@ Below is the database schema that I devised for the project:
 ## Design:
 
 #### Colour scheme: 
-The colour scheme for the site consists red, white and light grey. The red will be used for the Vitality Physio logo and will carry the branding throughout the site. The red is used both as background for certain sections and as a font colour in others, so that it is a subtle effect rather than an overwelming red theme across the site. The red will be contrasted with light greys and white, which will help it stand out.
+The colour scheme for the site consists of red, white and light grey. The red will be used for the Vitality Physio logo and will carry the branding throughout the site. The overall theme of the site will be clean and clinical to reflect the nature of the business, so the colours will be subtle and minimal. This was also chosen so that the colours are not overwelming and distracting to the users of the site. 
 
 
 
@@ -145,7 +147,7 @@ Services Details Page – Display details of a selected Treatment or Class
 Class Timetable Page – Timetable of classes for the week
 Contact Page – 
 Services Admin Page – Site Owner access only. Page for editing or adding treatments and classes for purchase.
-Reviews Page – Display the reviews that customers have provided for the company and its services.
+Blog Page – Display the reviews that customers have provided for the company and its services.
 
 
 ### Features to be Implemented in Future
