@@ -84,7 +84,7 @@ The idea for this project is all based around a fictional Physiotherapy practice
 
 Below is a Site diagram that I used as a basis for the structure of the project:
 
-![Site Structure](/workspace/vitality-physio/media/Site-Diagram.png "Site Structure Diagram")
+![Site Structure](media/Site-Diagram.png "Site Structure Diagram")
 
 #### Database Schema:
 
