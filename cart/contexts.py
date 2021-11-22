@@ -21,9 +21,20 @@ def cart_contents(request):
             'product': product,
         })
 
+    if request.user.is_authenticated:
+	    discount = total * Decimal(10/100)
+
+    else:
+	        discount = 0
+
+    grand_total = total - discount
+
+
     context = {
         'cart_items': cart_items,
         'total': total,
+	    'discount': discount,
+	    'grand_total': grand_total,
         'product_count': product_count,
     }
 

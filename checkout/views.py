@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from decimal import Decimal
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -21,7 +22,7 @@ def cache_checkout_data(request):
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
-            'bag': json.dumps(request.session.get('bag', {})),
+            'cart': json.dumps(request.session.get('cart', {})),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
@@ -97,7 +98,7 @@ def checkout(request):
             return redirect(reverse('products'))
 
         current_cart = cart_contents(request)
-        total = current_cart['total']
+        total = current_cart['grand_total']
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
@@ -149,6 +150,7 @@ def checkout_success(request, order_number):
         profile = UserProfile.objects.get(user=request.user)
         # Attach the user's profile to the order
         order.user_profile = profile
+        order.grand_total = order.order_total - (order.order_total * Decimal(10/100))
         order.save()
 
         # Save the user's info
