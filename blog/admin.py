@@ -5,8 +5,8 @@ from .models import Blog
 class BlogAdmin(admin.ModelAdmin):
     list_display = (
         'author', 'subject',
-     'content'
+        'content'
     )
 
-admin.site.register(Blog, BlogAdmin)
 
+admin.site.register(Blog, BlogAdmin)

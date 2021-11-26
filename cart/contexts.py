@@ -1,5 +1,4 @@
 from decimal import Decimal
-from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
@@ -22,19 +21,18 @@ def cart_contents(request):
         })
 
     if request.user.is_authenticated:
-	    discount = total * Decimal(10/100)
+        discount = total * Decimal(10/100)
 
     else:
-	        discount = 0
+        discount = 0
 
     grand_total = total - discount
-
 
     context = {
         'cart_items': cart_items,
         'total': total,
-	    'discount': discount,
-	    'grand_total': grand_total,
+        'discount': discount,
+        'grand_total': grand_total,
         'product_count': product_count,
     }
 

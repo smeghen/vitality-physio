@@ -44,7 +44,6 @@ def adjust_cart(request, item_id):
         cart.pop(item_id)
         messages.success(request, f'Removed {product.name} from your cart')
 
-
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
 
@@ -58,7 +57,6 @@ def remove_from_cart(request, item_id):
         product = get_object_or_404(Product, pk=item_id)
         cart.pop(item_id)
         messages.success(request, f'Removed {product.name} from your cart')
-
 
         request.session['cart'] = cart
         return HttpResponse(status=200)

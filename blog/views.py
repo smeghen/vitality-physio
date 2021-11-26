@@ -83,5 +83,3 @@ def delete_blog(request, blog_id):
     blog.delete()
     messages.success(request, 'Blog deleted!')
     return redirect(reverse('blog'))
-
-
