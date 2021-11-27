@@ -6,17 +6,7 @@
 {% endblock %}
 
 {% block content %}
-<!--
-<section>
-    <div class="container-fluid ">
-        <div class="masthead bg-black hero-image h-100">
-            <div class="col-sm-6 px-2">
-                
-            </div>
-        </div>
-    </div>
-</section>
--->
+
  <!--                       About Section   -->
  <section class="page-section-white" id="about">
     <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -47,58 +37,57 @@
 
  <!--                       Treatments Section   -->
  <section class="page-section-grey" id="treatments">
-    <div>
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-lg-12 text-center">
-                <hr>
-                <h2 class="text-black mt-0">Physiotherapy Services</h2>
-                <hr>
-            <div>
-                <div class="row">
-                    <div class="col-sm col-md-4 col-lg-4 py-3">
-                        <p class="text-uppercase"><strong>Shockwave Therapy</strong></p>
-                        <a href="{% url 'products' %}?category=Physiotherapy" title="Shockwave" >
-                            <img class="img-fluid img-thumbnail img-home" src="{{ MEDIA_URL }}shockwave.jpg" alt="Shockwave Therapy" />
-                        </a>
-                    </div>
-                    <div class="col-sm col-md-4 col-lg-4 py-3">
-                        <p class="text-uppercase"><strong>Sports Injury</strong></p>
-                        <a href="{% url 'products' %}?category=Physiotherapy" title="Sports Injuries">
-                            <img class="img-fluid img-thumbnail img-home" src="{{ MEDIA_URL }}sports-injury.jpg" alt="Sports Injuries" />
-                        </a>
-                    </div>
-                    <div class="col-sm col-md-4 col-lg-4 py-3">
-                        <p class="text-uppercase"><strong>Dry Needling</strong></p>
-                        <a href="{% url 'products' %}?category=Physiotherapy" title="Dry Needling">
-                            <img class="img-fluid img-thumbnail img-home" src="{{ MEDIA_URL }}dry-needling.jpg" alt="Dry needling" />
-                        </a>
-                    </div>
-                    <div class="col-sm col-md-4 col-lg-4 py-3">
-                        <p class="text-uppercase"><strong>Sports Massage</strong></p>
-                        <a href="{% url 'products' %}?category=Physiotherapy" title="Sports Massage">
-                            <img class="img-fluid img-thumbnail img-home" src="{{ MEDIA_URL }}sports-massage.jpg" alt="Sports Massage" />
-                        </a>
-                    </div>
-                    <div class="col-sm col-md-4 col-lg-4 py-3">
-                        <p class="text-uppercase"><strong>Neck/Back Pain</strong></p>
-                        <a href="{% url 'products' %}?category=Physiotherapy" title="neck-pain">
-                            <img class="img-fluid img-thumbnail img-home" src="{{ MEDIA_URL }}neck-pain.jpg" alt="Neck/Back Pain" />
-                        </a>
-                    </div>
-                    <div class="col-sm col-md-4 col-lg-4 py-3">
-                        <p class="text-uppercase"><strong>Manual Therapy</strong></p>
-                        <a href="{% url 'products' %}?category=Physiotherapy" title="Manual Therapy">
-                            <img class="img-fluid img-thumbnail img-home" src="{{ MEDIA_URL }}manual-therapy.jpg" alt="Manual Therapy" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        
+    
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-lg-12 text-center">
+            <hr>
+            <h2 class="text-black mt-0">Physiotherapy Services</h2>
+            <hr>
+        </div>
     </div>
+    <div class="row">
+        <div class="col-sm col-md-4 col-lg-4 py-3">
+            <p class="text-uppercase"><strong>Shockwave Therapy</strong></p>
+            <a href="{% url 'products' %}?category=Physiotherapy" title="Shockwave" >
+                <img class="img-fluid img-thumbnail img-home" src="{{ MEDIA_URL }}shockwave.jpg" alt="Shockwave Therapy" />
+            </a>
+        </div>
+        <div class="col-sm col-md-4 col-lg-4 py-3">
+            <p class="text-uppercase"><strong>Sports Injury</strong></p>
+            <a href="{% url 'products' %}?category=Physiotherapy" title="Sports Injuries">
+                <img class="img-fluid img-thumbnail img-home" src="{{ MEDIA_URL }}sports-injury.jpg" alt="Sports Injuries" />
+            </a>
+        </div>
+        <div class="col-sm col-md-4 col-lg-4 py-3">
+            <p class="text-uppercase"><strong>Dry Needling</strong></p>
+            <a href="{% url 'products' %}?category=Physiotherapy" title="Dry Needling">
+                <img class="img-fluid img-thumbnail img-home" src="{{ MEDIA_URL }}dry-needling.jpg" alt="Dry needling" />
+            </a>
+        </div>
+        <div class="col-sm col-md-4 col-lg-4 py-3">
+            <p class="text-uppercase"><strong>Sports Massage</strong></p>
+            <a href="{% url 'products' %}?category=Physiotherapy" title="Sports Massage">
+                <img class="img-fluid img-thumbnail img-home" src="{{ MEDIA_URL }}sports-massage.jpg" alt="Sports Massage" />
+            </a>
+        </div>
+        <div class="col-sm col-md-4 col-lg-4 py-3">
+            <p class="text-uppercase"><strong>Neck/Back Pain</strong></p>
+            <a href="{% url 'products' %}?category=Physiotherapy" title="neck-pain">
+                <img class="img-fluid img-thumbnail img-home" src="{{ MEDIA_URL }}neck-pain.jpg" alt="Neck/Back Pain" />
+            </a>
+        </div>
+        <div class="col-sm col-md-4 col-lg-4 py-3">
+            <p class="text-uppercase"><strong>Manual Therapy</strong></p>
+            <a href="{% url 'products' %}?category=Physiotherapy" title="Manual Therapy">
+                <img class="img-fluid img-thumbnail img-home" src="{{ MEDIA_URL }}manual-therapy.jpg" alt="Manual Therapy" />
+            </a>
+        </div>
+    </div>
+
 </section>
 
 <!--                       Classes Section   -->
-<section class="page-section-white" id="classes">
+<section class="page-section-white" id="class">
    
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-12 text-center">
@@ -164,7 +153,7 @@
 {{ block.super }}
 
 <!-- Back to to button js -->
-<script type="text/javascript">
+<script>
     $('.btt-link').click(function(e) {
         window.scrollTo(0,0)
     })
