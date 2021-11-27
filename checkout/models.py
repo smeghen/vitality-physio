@@ -2,7 +2,6 @@ import uuid
 
 from django.db import models
 from django.db.models import Sum
-from django.conf import settings
 from decimal import Decimal
 
 from products.models import Product
@@ -43,7 +42,8 @@ class Order(models.Model):
         """
         Update grand total each time a line item is added
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))
+        ['lineitem_total__sum'] or 0
         self.order_discount = self.order_total * Decimal(10/100)
         self.grand_total = self.order_total
         self.save()

@@ -13,7 +13,9 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your message has been sent and we will be response shortly.')
+            messages.success(
+                request,
+                'Your message has been sent and we will be response shortly.')
             return redirect(reverse('contact'))
         else:
             messages.error(

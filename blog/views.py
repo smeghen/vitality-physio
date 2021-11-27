@@ -31,7 +31,10 @@ def add_blog(request):
             messages.success(request, 'Successfully added blog!')
             return redirect(reverse('home'))
         else:
-            messages.error(request, 'Failed to add blog. Please ensure the form is valid.')
+            messages.error(request, (
+                'Failed to add blog. '
+                'Please ensure the form is valid.')
+            )
     else:
         form = BlogForm()
 
@@ -58,7 +61,10 @@ def edit_blog(request, blog_id):
             messages.success(request, 'Successfully updated Blog')
             return redirect(reverse('blog'))
         else:
-            messages.error(request, 'Failed to update Blog. Please ensure the form is valid.')
+            messages.error(request, (
+                'Failed to add blog. '
+                'Please ensure the form is valid.')
+            )
     else:
         form = BlogForm(instance=blog)
         messages.info(request, f'You are editing {blog.subject}')
