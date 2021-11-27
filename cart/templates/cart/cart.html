@@ -25,7 +25,7 @@
                             <thead class="text-danger thead-dark">
                                 <tr>
                                     <th scope="col">Product</th>
-                                    <th scope="col"></th>
+                                    <th scope="col" class="cart-image"></th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Qty</th>
                                     <th scope="col">Subtotal</th>
@@ -36,7 +36,7 @@
                     {% for item in cart_items %}
                     <tbody>
                     <tr>
-                        <td class="p-3 w-25">
+                        <td class="p-3 w-25 cart-image">
                             {% if item.product.image %}
                             <img class="img-thumbnail rounded" src="{{ MEDIA_URL }}{{ item.product.image }}" alt="{{ item.product.name }}">
                             {% else %}
