@@ -11,7 +11,7 @@ This site was designed for the fourth milestone project in Full Stack Software D
 ## Vitality Physio
 The idea for this project is all based around a fictional Physiotherapy practice called "Vitality Phyios", with the site showcasing the range of services and treatments that they offer. Users will have the ability to pre-purchase and pay for these services online, with registered users being able to avail of a discount and access to blogs posted by Physiotherapist on a range of topics. The site will also provide a contact page to submit any queries that users may have.
 
- The live website can be found here: https://
+ The live website can be found here: https://smeghen-vitality-physio.herokuapp.com/
 
 ---
 
@@ -217,14 +217,12 @@ Django-Allauth is the integrated Django application used for the registration an
 ## Technologies Used
 * [HTML5](https://en.wikipedia.org/wiki/HTML5) -  HTML is the main language used for the structure of the site.
 * [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - Custom written CSS is used to style the site.
-* [Materialize](https://materializecss.com/) – The layout and styling of the site was helped by the use of Materialize framework.
-* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Utilized for form validation
-* [jQuery](https://jquery.com/) - Used for various Materialize components such as, Datepicker, Timepicker, Dropdown menu, side navbar, parallax image and modal.
+* [Bootstrap](https://getbootstrap.com/) – The layout and styling of the site was helped by the use of Bootstrap framework.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Used to implement Stripe.
 * [Python](https://www.python.org/) - Python is used as the back-end programming language.
-* [Flask](https://flask.palletsprojects.com/en/1.1.x/) - Python microframework Flask is used to create this project.
-* [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) - Jinja templating language is used with Flask in the HTML code.
-* [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) - Werkzeug is used for password hashing and authentication and autohorization.
-* [MobgoDB](https://www.mongodb.com/1) - Database used to create the document based collections for the data storage of this site.
+* [Django](https://www.djangoproject.com/) - This project was created using the Python framework Django.
+* [PostgreSQL](https://www.postgresql.org/) - Used to create the relational databases in conjunction with Heroku.
+* [Heroku](https://dashboard.heroku.com/) - Hosting platform to deploy the live site.
 * [Heroku](https://dashboard.heroku.com/) - Hosting platform to deploy the live site.
 * [Font Awesome](https://fontawesome.com/) – Was used to obtain the social media icons used.
 * [Balsamiq](https://balsamiq.com//)Balsamiq – Was used to create the wireframes of the site on the various devices.
@@ -248,7 +246,7 @@ The testing process can be found [here](TESTING.md)
 
 * When working on products.html in the products app I had difficulty getting the product images to display. After checking numerous options and searching for spelling mistakes, the answer was found on Slack. I was missing the 'django.template.context_processors.media', in the TEMPLATE 'context_processors' in settings.py.
 
-* When trying to link to AWS I encountered an issue that Heroku would fail in building and deploying giving an error log of ModuleNotFound: No module named 'storages'. I reviewed the steps that I had taken and checked my installs using the command pip list, which showed that django-storages had been installed. In settings.py it had been added correctly to the Installed Apps and I review the requiremnents.txt and it was showing. After many hours of searching the error on Slack and stepping through the process I could not find anything that was done wrong. After leaving the issue overnight and looking at it freah the next day I ran through the same checklist and discovered that on restarting the workspace the requirements.txt was missing items that had previously been showing. Doing a pip3 freeze > requirements.txt and pushing the changes and all worked fine and Heroku was able to connect to AWS.
+* When trying to link to AWS I encountered an issue that Heroku would fail in building and deploying giving an error log of ModuleNotFound: No module named 'storages'. I reviewed the steps that I had taken and checked my installs using the command pip list, which showed that django-storages had been installed. In settings.py it had been added correctly to the Installed Apps and I reviewed the requiremnents.txt and it was showing. After many hours of searching the error on Slack and stepping through the process I could not find anything that was done wrong. After leaving the issue overnight and looking at it fresh the next day I ran through the same checklist and discovered that on restarting the workspace the requirements.txt was missing items that had previously been showing. Doing a pip3 freeze > requirements.txt and pushing the changes and all worked fine and Heroku was able to connect to AWS.
 
 
 # Deployment
