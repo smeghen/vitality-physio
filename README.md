@@ -113,22 +113,26 @@ for the site. These were created using [Balsamiq](https://balsamiq.com//).
 
 ##### Home Page
 
-![Wireframe mockup](static/images/wireframes/HomePage.png "Wireframe mockup")
+![Wireframe mockup](media/Readme-images/Home-Page.png "Wireframe mockup")
 
-##### Log In Page
+##### Treatments & Classes
 
-![Wireframe mockup](static/images/wireframes/LogInPage.png "Wireframe mockup")
+![Wireframe mockup](media/Readme-images/Treatments&Classes.png "Wireframe mockup")
 
-##### Register Page
+##### Product Details
 
-![Wireframe mockup](static/images/wireframes/RegisterPage.png "Wireframe mockup")
+![Wireframe mockup](media/Readme-images/Product-Detail.png "Wireframe mockup")
 
 ##### Profile Page
 
-![Wireframe mockup](static/images/wireframes/ProfilePage.png "Wireframe mockup")
+![Wireframe mockup](media/Readme-images/Profile-Page.png "Wireframe mockup")
+
+##### Shopping Cart Page
+
+![Wireframe mockup](media/Readme-images/Shopping-Cart.png "Wireframe mockup")
 
 
- For the pfd version of the wireframes click [here.](https://)
+
  
 
 ### Differences to Design
@@ -225,11 +229,17 @@ Set up connection to Github Repository:
 Set environment variables:
 
 Click the settings tab and then click the Reveal Config Vars button and add the following:
-* key: IP, value: 0.0.0.0
-* key: PORT, value: 5000
-* key: MONGO_DBNAME, value: (database name you want to connect to)
-* key: MONGO_URI, value: (mongo uri - This can be found in MongoDB by going to clusters > connect > connect to your application and substituting the password and dbname that you set up in the link).
-* key: SECRET_KEY, value: (This is a custom secret key set up for configuration to keep client-side sessions secure).
+* DATABASE_URL
+* EMAIL_HOST_PASS
+* EMAIL_HOST_USER
+* SECRET_KEY
+* STRIPE_PRICE_ID
+* STRIPE_PUBLIC_KEY
+* STRIPE_SECRET_KEY
+* STRIPE_WH_SECRET
+* AWS_ACCESS_KEY_ID
+* AWS_SECRET_ACCESS_KEY
+* USE_AWS
 
 Enable automatic deployment:
 
@@ -252,9 +262,6 @@ Once the project has been loaded, run the command
 
   to install all the required packages.
 
-The project will not run locally with database connections unless the user sets up an env.py file configuring 
-IP, PORT, MONGO_URI, MONGO_DBNAME and SECRET_KEY. You must have the connection details in order to do this. 
-These details are private and not disclosed in this repository for security purposes.
 
 
 ---
