@@ -4,7 +4,7 @@
 
 
 This site was designed for the fourth milestone project in Full Stack Software Development with the Code Institute. The site is based around e-commerce using HTML, CSS, Javascript, JQuery, Python, Django Framework and Postgressql.
-![Site Mockup](static/images/Multi-device.PNG "Site Mockup")
+![Site Mockup](media/Readme-images/Mockup.JPG "Site Mockup")
 
 ---
 
