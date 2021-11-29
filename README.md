@@ -39,7 +39,7 @@ The idea for this project is all based around a fictional Physiotherapy practice
 * [Acknowledgements](#Acknowledgements)
 
 
- The live website can be found here: https://
+ The live website can be found here: https://smeghen-vitality-physio.herokuapp.com/
 
 
 ---
@@ -88,7 +88,17 @@ Below is a Site diagram that I used as a basis for the structure of the project:
 
 #### Database Schema:
 
+Django works with SQL databases and I utilised SQLite in the development envirnoment, and PostgreSQL database on Heruko for the deployed site.
+
 Below is the database schema that I devised for the project:
+
+##### Products App:
+
+Category model
+
+**Name**|**Database Key**|**Field Type**|**Type Validation**
+:-----:|:-----:|:-----:|:-----:
+**Name**|**name**|**CharField**|**max\_length=254**
 
 ![Database Schema]( "Database Schema")
 
@@ -137,12 +147,19 @@ for the site. These were created using [Balsamiq](https://balsamiq.com//).
 
 ### Differences to Design
 
-
+* During development and testing I found that the use of a hero image was not adequately able to convey the purpose of the site. The images that I was using were not able to capture the nature of the 
+business of a Phyiotherapy practice, so I decided to incorporate text aloong side an image to better aid first time users understanding the purpose of the site. I thought this was especially important for smaller screen
+sizes, where a user would need to scroll down before finding any details on what the site is about.
 
 
 ## Site Features
 
-Home Page – Details on the business with some details on services and treatments provided
+### Home Page – There are 4 sections to the Home page. 
+*About section* - has a brief outline of the site and the business, with a link to the Contact page and image of a Physiotherapist.
+*Phyisotherapy Service* - Section hightlighting the different services provided.
+*Classes* - Section showing the classes provided.
+*Healthcare Proveders* - Section with links to Healthcare Providers that the business is cover by.
+
 Log in Page – 
 Register Page – 
 Profile Page – Contains user address and purchase history
