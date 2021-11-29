@@ -154,26 +154,63 @@ sizes, where a user would need to scroll down before finding any details on what
 
 ## Site Features
 
-### Home Page – There are 4 sections to the Home page. 
-*About section* - has a brief outline of the site and the business, with a link to the Contact page and image of a Physiotherapist.
-*Phyisotherapy Service* - Section hightlighting the different services provided.
-*Classes* - Section showing the classes provided.
-*Healthcare Proveders* - Section with links to Healthcare Providers that the business is cover by.
+Each page of the site has a responsive navbar contains the company logo on the top left and links to Account access and Shopping Cart on the right. There is also a simple Footer on each page with links to social media and copyright information.
 
-Log in Page – 
-Register Page – 
-Profile Page – Contains user address and purchase history
-Services Page – Display of the Treatments and Classes available
-Services Details Page – Display details of a selected Treatment or Class
-Class Timetable Page – Timetable of classes for the week
-Contact Page – 
-Services Admin Page – Site Owner access only. Page for editing or adding treatments and classes for purchase.
-Blog Page – Display the reviews that customers have provided for the company and its services.
+The navigation links of the navbar are for Products, Treatments, Classes and Contact Us, with the Blog link only visible to Registered Users.
+
+
+
+### Home Page 
+
+There are 4 sections to the Home page. 
+
+*About section* - has a brief outline of the site and the business, with a link to the Contact page and image of a Physiotherapist.
+
+*Phyisotherapy Service* - Section hightlighting the different services provided.
+
+*Classes* - Section showing the classes provided.
+
+*Healthcare Providers* - Section with links to Healthcare Providers that the business is cover by.
+
+### Products App
+*Product* - This section displays all the products available to purchase on the site. They are displayed as simple cards images with the name and price shown over the image. The nav links of Treatments and Classes act as a filter to display the corresponding products.
+
+*Product Details* - This option displays more details of the product and provides the options to Add to cart. 
+
+*Product Management* - For authenticated Super Users the options to Edit or Delete a product are diplayed on the Product Details. The addition of a new product can be accessed from the Navbar - My Account - Product Management link.
+
+### Contact App
+
+A contact form for any User to submit any queries that they have. Each contact is posted to the database rather than being sent by email, as I feel that it is a better way of tracking contacts as emails can be overlooked. Authenticated Users can view all contacts from the Navbar - My Account - Contact Management.
+
+### Profile App
+
+The User profile can be accessed from the Navbar - My Account - My Profile. Here the saved Shipping information is displayed and can be edited as required. Also displayed is the Order History of the User.
+
+### Blog App
+
+*Blog*  - Registered Users can view the Blogs posted by Physiotherapists.
+
+*Blog Management* - For authenticated Super Users the options to Edit or Delete aBlog are diplayed under the title of each blog.. The addition of a new blog can be accessed from the Navbar - My Account - Blog Management link.
+
+### Cart App
+
+Everytime a product is added to the cart, the cart is updated on the Navbar with the Total. Navigating to the Cart all items that have been placed in the cart will be displayed with Name, price, quantity and total. Adjustments to the items in the cart can be made such as update quantity or removed from cart.
+
+### Checkout App
+
+Here a User can verify their personal details and payment information, For Registered Users a discount will be applied to the order total. The Card Payment is managed using Stripe, which validates the card and manages the security of the payment.
+
+### Allauth
+
+Django-Allauth is the integrated Django application used for the registration and account management of Users. Features that are utilized for this site are signup, login, logout and password management. These features are tied into the automatic email generation that users recieve for account verification, password reset and order confirmation. 
 
 
 ### Features to be Implemented in Future
 
-* 
+* Setup a booking system so that Users cannot only purchased treatments and classes, but can also book times for their selected services.
+* Added in more details to the specifc treatments displayed on the Home page.
+* For the Contact Management add more functionality with the options to add response sent to User, date of response and status such as open, closed, etc.
 
 
 ---
