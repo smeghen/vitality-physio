@@ -215,15 +215,42 @@ Django-Allauth is the integrated Django application used for the registration an
 
 ---
 ## Technologies Used
+- This project was built primarily using HTML5 semantic markup, CSS stylesheets, Javascript, Python, Django, SQLite and Heroku Postgres.
+
+* [Python](https://www.python.org/) - Python is used as the back-end programming language.
+    - The following Python modules were used on this project:
+        - asgiref==3.4.1
+        - boto3==1.20.11
+        - botocore==1.23.11
+        - dj-database-url==0.5.0
+        - Django==3.2.8
+        - django-allauth==0.41.0
+        - django-crispy-forms==1.13.0
+        - django-storages==1.12.3
+        - gunicorn==20.1.0
+        - jmespath==0.10.0
+        - oauthlib==3.1.1
+        - Pillow==8.3.2
+        - psycopg2-binary==2.9.2
+        - pylint-django==2.4.4
+        - pylint-plugin-utils==0.6
+        - python3-openid==3.2.0
+        - pytz==2021.3
+        - requests-oauthlib==1.3.0
+        - s3transfer==0.5.0
+        - sqlparse==0.4.2
+        - stripe==2.61.0
+
 * [HTML5](https://en.wikipedia.org/wiki/HTML5) -  HTML is the main language used for the structure of the site.
 * [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - Custom written CSS is used to style the site.
 * [Bootstrap](https://getbootstrap.com/) – The layout and styling of the site was helped by the use of Bootstrap framework.
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Used to implement Stripe.
-* [Python](https://www.python.org/) - Python is used as the back-end programming language.
 * [Django](https://www.djangoproject.com/) - This project was created using the Python framework Django.
 * [PostgreSQL](https://www.postgresql.org/) - Used to create the relational databases in conjunction with Heroku.
 * [Heroku](https://dashboard.heroku.com/) - Hosting platform to deploy the live site.
-* [Heroku](https://dashboard.heroku.com/) - Hosting platform to deploy the live site.
+* [SQLite](https://www.sqlite.org/index.html)- SQLite was used as the database for the creation and development of this project.
+* [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) - Jinja was used for templating.
+* [Stripe](https://stripe.com/ie) - Stripe payments were used to build the card payment system of this site.
 * [Font Awesome](https://fontawesome.com/) – Was used to obtain the social media icons used.
 * [Balsamiq](https://balsamiq.com//)Balsamiq – Was used to create the wireframes of the site on the various devices.
 * [Adobe Photoshop Express](https://www.adobe.com/ie/photoshop/online/resize-image.html) - Used to resize images used on the site. 
@@ -263,7 +290,18 @@ To create the project the following steps were used:
 
 
 ## Deploy to Heroku
-The website was deployed as follows:
+Before deploying the website to Heroku, the following steps must be followed to allow the app to work in Heroku:
+* Create requirements.txt file that contains the names of packages being used in Python. It is important to update this file if other packages or modules are installed during project development by using the following command:
+
+    - pip freeze --local > requirements.txt
+
+* Create Procfile that contains the name of the application file so that Heroku knows what to run. If the Procfile has a blank line when it is created remove this as this may cause problems.
+
+* Push these files to GitHub.
+
+* Install `psycopg2` and `dj_datatbase_url` in your workspace cli.
+
+Once those steps are done, the website can be deployed in Heroku using the steps listed below:
 
 * Navigate to Heroku.com and login.
 * Click on the new button.
@@ -297,6 +335,83 @@ Enable automatic deployment:
 
 * Click the Deploy tab
 * In the Automatic deploys section, choose the branch you want to deploy from then click Enable Automation Deploys.
+
+### Setting up the AWS s3 bucket
+* Create an Amazon AWS account
+* Search for S3 and create a new bucket
+    - Allow public access
+* Under Properties > Static website hosting
+    - Enable
+    - index.html as index.html
+    - save
+* Under Permissions > CORS use the following:
+```
+[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]
+```
+* Under Permissions > Bucket Policy:
+    - Generate Bucket Policy and take note of Bucket ARN
+    - Chose S3 Bucket Policy as Type of Policy
+    - For Principal, enter *
+    - Enter ARN noted above
+    - Add Statement
+    - Generate Policy
+    - Copy Policy JSON Document
+    - Paste policy into Edit Bucket policy on the previous tab
+    - Save changes
+* Under Access Control List (ACL):
+    - For Everyone (public access), tick List
+    - Accept that everyone in the world may access the Bucket
+    - Save changes
+
+**AWS IAM (Identity and Access Management) setup**
+* From the IAM dashboard within AWS, select User Groups:
+    - Create a new group
+    - Click through and Create Group
+* Select Policies:
+    - Create policy
+    - Under JSON tab, click Import managed policy
+    - Choose AmazongS3FullAccess
+    - Edit the resource to include the Bucket ARN noted earlier when creating the Bucket Policy
+    - Click next step and go to Review policy
+    - Give the policy a name and description of your choice
+    - Create policy
+* Go back to User Groups and choose the group created earlier
+    - Under Permissions > Add permissions, choose Attach Policies and select the one just created
+    - Add permissions
+* Under Users:
+    - Choose a user name 
+    - Select Programmatic access as the Access type
+    - Click Next
+    - Add the user to the Group just created
+    - Click Next and Create User
+* Download the `.csv` containing the access key and secret access key.
+    - **THE `.csv` FILE IS ONLY AVAILABLE ONCE AND CANNOT BE DOWNLOADED AGAIN.**
+
+**Connecting Heroku to AWS S3**
+* Install boto3 and django-storages
+```
+pip3 install boto3
+pip3 install django-storages
+pip3 freeze > requirements.txt
+```
+* Add the values from the `.csv` you downloaded to your Heroku Config Vars under Settings:
+* Delete the `DISABLE_COLLECTSTATIC` variable from your Cvars and deploy your Heroku app
+* With your S3 bucket now set up, you can create a new folder called media (at the same level as the newly added static folder) and upload any required media files to it.
+    - **PLEASE MAKE SURE `media` AND `static` FILES ARE PUBLICLY ACCESSIBLE UNDER PERMISSIONS**
+
 
 
 ## Run Locally
