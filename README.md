@@ -67,7 +67,6 @@ The idea for this project is all based around a fictional Physiotherapy practice
 *	I want to be able to remove items from my shopping cart.
 *	I want to be able to view my shopping cart and see all items in the cart with price and totals displayed.
 *	I want to enter my payment details for purchase of items.
-*	I want to be able to reset my password if it is forgotten.
 *	I want to get a confirmation email of my purchase.
 
 *Site Owner:*
@@ -268,12 +267,6 @@ Django-Allauth is the integrated Django application used for the registration an
 # Testing
 
 The testing process can be found [here](TESTING.md)
-
-# Issues Encountered
-
-* When working on products.html in the products app I had difficulty getting the product images to display. After checking numerous options and searching for spelling mistakes, the answer was found on Slack. I was missing the 'django.template.context_processors.media', in the TEMPLATE 'context_processors' in settings.py.
-
-* When trying to link to AWS I encountered an issue that Heroku would fail in building and deploying giving an error log of ModuleNotFound: No module named 'storages'. I reviewed the steps that I had taken and checked my installs using the command pip list, which showed that django-storages had been installed. In settings.py it had been added correctly to the Installed Apps and I reviewed the requiremnents.txt and it was showing. After many hours of searching the error on Slack and stepping through the process I could not find anything that was done wrong. After leaving the issue overnight and looking at it fresh the next day I ran through the same checklist and discovered that on restarting the workspace the requirements.txt was missing items that had previously been showing. Doing a pip3 freeze > requirements.txt and pushing the changes and all worked fine and Heroku was able to connect to AWS.
 
 
 # Deployment

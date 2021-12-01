@@ -14,6 +14,7 @@
 ---
 
 ## Validators
+
 ### HTML
 
   All the following HTML pages were validated with [W3C Markup Validation Service](https://validator.w3.org/)
@@ -93,7 +94,7 @@ CSS was validated by using W3C Jigsaw CSS Validation Service [W3C Jigsaw CSS Val
 
 ![CSS Validator Results](media/TESTING-Images/CSS-validator.JPG "CSS Validator Results")
 
-###Javascript
+### Javascript
 
 Javascript code was passed through[JShint](https://jshint.com/) and no errors were found.
 ![JSHint Results](media/TESTING-Images/JShint.JPG "JSHint Results")
@@ -124,41 +125,89 @@ that caused issues and have included notes in relation to these.
 
 ## User Stories Testing
 
+### Guest User
+
 > I want to immediately understand the nature of the site and learn more about how to use it.
-* This is addressed in the short site description within the image on the Home page and the About modal that is accessed from the button also on the image on the home page.
+* This is addressed in the short site description that is displayed on the Home page beside the image of a physiotherapist.
+
+![Home Page](media/TESTING-Images/site-purpose.JPG "Home Page")
 
 > I want to be able to easily navigate through the site, with the structure of the content easy to follow.
-* I kept the navigation of the site easy to use by duplicating the links on the navbar with buttons and having them located logically throughout the site, e.g. there is a Create Event button at the top of the Profile page.
-
-> I want to easily log in to the site.
-
-> I want to easily be able to register.
-* Login and Register links are located on the navbar and buttons for both appear on the Home page image.
-
-> I want to be able search the upcoming club events.
-* There is a Search Function located on the Home page, and within it users can search for Events based on Title, Description, Facility and Group.
+* I kept the navigation of the site easy to use by duplicating the links on the navbar with buttons and having them located logically throughout the site, e.g. there is a Contact link both in the navbar, footer and on the Home page welcome section.
 
 > I want to be able to access the site from all device types.
 * The site was designed using the mobile first approach with the specfic understanding that the majority of users would be accessing the site on either tablets or mobile phones. 
 
-> I want to be able to log onto the website and see the events that I have created.
-* Once a user successfully logs in to the site they are automatically taken to their Profile page where the Events that they have created are displayed.
+> I want to easily see the treatments and services offered.
+* On the Navbar I have 3 options for view products. Products - shows all products available. Treatments - shows all physiotherapy treatments. Classes - shows all classes. 
+
+![All Products Page](media/TESTING-Images/products-available.JPG "All Products Page")
+
+> I want to easily be able to register.
+* Register link is located on the navbar under the My Account icon and this appears on all pages of the site.
+
+> I want to be able to easily add my details.
+* A Guest User is able to make a purchase without having to register and can add their details on the Checkout Page so that their details are record against their order.
+
+![Checkout Page](media/TESTING-Images/checkout.JPG "Checkout Page")
+
+> I want to be able to contact the Company with any questions I may have in regards treatments and services.
+* Any User can easily pass on questions they have by filling in the Contact form on the site and submitting it.
+
+![Contact Page](media/TESTING-Images/contact.JPG "Contact Page")
+
+
+### Registered User
+
+> I want to be able to log onto the website and see my purchase history.
+
+> I want to be able to edit my details.
+* Once a Registered User is logged into the site, they can navigate to their Profile page which is located under the My Account icon and this appears on all pages of the site. On this page they have the option to edit their details and also view their purchase history.
+
+![Profile Page](media/TESTING-Images/profile.JPG "Profile Page")
 
 > I want to be easily able to log out of my account.
-* A user can Log out of an account simply by selecting the Log Out navbar link, when logged out a confirmation message appears at the top of the screen.
+* Under the My Account icon which appears on all pages of the site is the link to Logout of the site.
 
-> I want to be able to create events.
+![Logout Page](media/TESTING-Images/logout.JPG "Logout Page")
 
-> I want to be able to schedule events based on the availability of the facilities.
-* To navigate to the Create Event page the navbar can be used and also there is a button located at the top of a Users Profile page. Once on the page the user can then complete the required fields on 
-the form to Create an Event. Once the form is submitted the site preforms a check on the database and will notify the user if the facility is not available to be booked.
+> I want to be able to reset my password if it is forgotten.
+* On the Login page there is a link to Forgot Password page, then the User can enter their email address and a link will be sent to them that will allow them to create a new password.
 
-> I want to be able to edit events that I have created.
-* From the Profile page a user can select an Event that they have created and view the full details. There is a button to Edit the Event. This will bring the user to the Edit Event page, where they can 
-make the required changes. 
+![Password Page](media/TESTING-Images/password.JPG "Password Page")
 
-> I want to be able delete the events that I have created.
-* From the Profile page a user can select an Event that they have created and view the full details. There is a button to Delete the Event, by selecting this a warning modal appears and the suer can process or cancel.
+
+### Any User
+
+
+> I want to be able to add items to my shopping cart.
+* When a user finds a product they like they can select that item and be brought to the item details page. On this page the user has the options to select they quantity the want and then add it to their shopping cart.
+
+![Product Details Page](media/TESTING-Images/product-details.JPG "Product Details Page")
+
+> I want to be able to remove items from my shopping cart.
+
+> I want to be able to view my shopping cart and see all items in the cart with price and totals displayed.
+
+* A User is able to access their Shopping cart from the Bag icon at the top of all pages. On this page will be displayed the items, price and totals in the cart. Here they can change the quantity of items in their cart or delete them. 
+
+![Cart Page](media/TESTING-Images/cart.JPG "Cart Page")
+
+> I want to enter my payment details for purchase of items.
+
+* From the Cart page a User can proceed to Checkout using the button at the bottom of the cart summary. On the Checkout page they can fill in the form with the payment details which will be validated
+
+![Checkout Page](media/TESTING-Images/checkout2.JPG "Checkout Page")
+
+> I want to get a confirmation email of my purchase.
+
+* Once Confirm Payment has been selected on Checkout and Stripe has validated the payment a confirmation email will be sent to the Users email with confirmation details of the purchase.
+
+![Order Confirmation](media/TESTING-Images/order-confirmation.JPG "Order Confirmation")
+
+
+### Site Owner
+
 
 ---
 
@@ -190,18 +239,9 @@ displays list of all upcoming events sorted by date. Displayed for each event is
 
 ## Issues Encountered 
 
-* Getting the Create Event function to check the database for existing Events that had the same parameters of Date, Time and Facility proved tricky for me. But, with a bit of time 
-and Slack research I came to understand the concepts that were required. What was throwing me was how to put each of the parameters into the search of the database. Once I understood 
-that declaring the variables of date, time and venue from the input form, and then passing them into the search of the database, it all fell into place for me. 
+* When working on products.html in the products app I had difficulty getting the product images to display. After checking numerous options and searching for spelling mistakes, the answer was found on Slack. I was missing the 'django.template.context_processors.media', in the TEMPLATE 'context_processors' in settings.py.
 
-* At first I assumed that the Edit Event function would work the same way as the Create Event, in that it would check the database for existing events with the same parameters of date, time 
-and facility, but upon testing I found that a user could not update the group, description or name of the event. The issue was that the Create Event search on the database when used in the Edit
-Event was actually just finding itself when the date, time and facility had not been edited and returning an Already booked message. The way around this was to put in an extra parameter
-of  "_id": { "$ne": ObjectId(event_id)}. So now the check on the database is for date, time, facility and event id not equal to the id that is being edited, then the event cannot be booked.
-
-* To help highlight the text on the forms for creating and editing an event, I changed the colour to white to stand out over the background images. This worked well for all inputs, however for the Datepicker the 
-Month and Date where not visible as it is a light coloured background. After a lot of research and trialing different solutions, I was able to resolve the issue with the use of Chrome Dev Tools, by selecting the items involved and finding the 
-Materialize css classes that are controlling the colour and adding my own css styling to these classes.
+* When trying to link to AWS I encountered an issue that Heroku would fail in building and deploying giving an error log of ModuleNotFound: No module named 'storages'. I reviewed the steps that I had taken and checked my installs using the command pip list, which showed that django-storages had been installed. In settings.py it had been added correctly to the Installed Apps and I reviewed the requiremnents.txt and it was showing. After many hours of searching the error on Slack and stepping through the process I could not find anything that was done wrong. After leaving the issue overnight and looking at it fresh the next day I ran through the same checklist and discovered that on restarting the workspace the requirements.txt was missing items that had previously been showing. Doing a pip3 freeze > requirements.txt and pushing the changes and all worked fine and Heroku was able to connect to AWS.
 
 ---
 
