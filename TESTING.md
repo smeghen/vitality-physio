@@ -14,12 +14,76 @@
 ---
 
 ## Validators
- - **[HTML Validator](https://validator.w3.org/):** No errors found.
-    - With testing the HTML code, the jinja templating was causing issues.
-    - I tested the HTML code by using chrome Dev Tools on the deployed site and capturing the source html. This code was then passed through the validator.
-    - The below warning messages were found for all pages. I chose to ignore them as they are not errors and by not adding headings did not impact the overall site layout.
+### HTML
 
-    ![HTML Validator Results](static/images/testing/HTML-Validator.PNG "HTML Validator Results")
+  All the following HTML pages were validated with [W3C Markup Validation Service](https://validator.w3.org/)
+* Home Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-home-page.JPG "HTML Validator Results")
+
+* Products Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-Products-page.JPG "HTML Validator Results")
+
+* Product Details Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-ProductDetails-page.JPG "HTML Validator Results")
+
+* Contact Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-Contact-page.JPG "HTML Validator Results")
+
+* Blog Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-Blog-page.JPG "HTML Validator Results")
+
+* Cart Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-Cart-page.JPG "HTML Validator Results")
+
+* Checkout Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-Checkout-page.JPG "HTML Validator Results")
+
+* Checkout Success Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-Checkout-Success-page.JPG "HTML Validator Results")
+
+* Add Product Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-Add-Product-page.JPG "HTML Validator Results")
+
+* Edit Product Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-Edit-Product-page.JPG "HTML Validator Results")
+
+* Add Blog Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-Add-Blog-page.JPG "HTML Validator Results")
+
+* Edit Blog Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-Edit-Blog-page.JPG "HTML Validator Results")
+
+* View Contacts Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-View-Contact-page.JPG "HTML Validator Results")
+
+* Profile Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-Profile-page.JPG "HTML Validator Results")
+
+* Login Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-Login-page.JPG "HTML Validator Results")
+
+* Logout Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-Logout-page.JPG "HTML Validator Results")
+
+* Register Page
+
+    ![HTML Validator Results](media/TESTING-Images/html-Register-page.JPG "HTML Validator Results")
 
 - **[CSS Validator](https://jigsaw.w3.org/css-validator/):** One error message.
     - The error message relates to the Materialize cdn which is below my control.
