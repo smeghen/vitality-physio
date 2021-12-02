@@ -246,23 +246,13 @@ Family members, peers of Slack and friends were asked to test the website and pr
 experience and any bugs that they found. Within this group of people the site was viewed on the following devices
  – Desktop, Laptop, iPad mini, iPad, iPhone 6, iPhone 8, Samsung Galaxy S6 and Huawei P30.
 
-* Some feedback that I received was in relation to the Datepicker and the fact that you could book events in the past. This capability could cause potential issues if Users incorrectly enter dates, to
-prevent this from happening I put a minDate: new Date() into the Datepicker JS function, which sets the minimum date available to select as today. In this way past dates are not available for selection.
+* Some feedback that I received was in relation to the Checkout page and the layout of the address form. Originally I had put it in without any particular thought to the sequence of the fields. I have since rearrange the fields so that they are logically in relation to a postal address.
 
-* When a user is logged in buttons to Register and Login still appear on the Home page parallax image. By using {% if session.user %} was able to remove them from the page and with the {% else %} show all buttons to user not
-logged in.
+* It was spotted that I had $, £ and € symbols in various places for price throughout the site, this was easily rectified by locating the symbols and updating the all to €.
 
-* Orginally on the Home page I had the Search option below the Event displayed, some users commented that it was too far down the page to find especially on smaller screens. To make it easier for users I moved it 
-to below the Parallax image so that it is more accessible.
+* On smaller screens it was found that the text on the Home page About section was overflowing and being lost, this was fixed by adding padding to the container so that the text would always be pushed away from the edges of the container.
 
-* Was observed on the Datepicker that for the long named months the letters were getting pushed behind the year. After checking on Dev Tools, was able to identify the style class involved and adjusted it so 
-that full month name is now visible.
 
-* Was found that by copying the url from one browrser to another for a logged in user then the login steps could be by past and changes could be made to events. I rectified this 
-by adding a check for Profile, Create Event and Edit Event pages to confirm that user is in session then they can proceed, otherwise they are redirected to the login page.
-
-* One User asked for a page to view events so that you could check availability of a facility before going to the Create page. Based on this feedback I created a Summary page which 
-displays list of all upcoming events sorted by date. Displayed for each event is the Facility, Event Name, Date and Time, so that at a glance users can see what is coming up. 
 
 ---
 
