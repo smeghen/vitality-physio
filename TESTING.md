@@ -114,9 +114,10 @@ The following browsers were used to test the website – Google Chrome, Microsof
 For the testing of this project I devised a spreadsheet detailing the tests to be performed for the various pages and features.
 Below is an image of a small section of this spreadsheet:
 
-![Testing spreadsheet sample](static/images/testing/Sample-Manual-Testing.PNG "Sample of Testing Spreadsheet")
+![Testing spreadsheet sample](media/TESTING-Images/manual-testing.JPG "Sample of Testing Spreadsheet")
 
-The full version of the spreadsheet can be downloaded [here.](https://github.com/smeghen/clubplanner/blob/master/static/images/testing/MS3_Testing.xlsx)
+The full version of the spreadsheet can be downloaded [here.](https://github.com/smeghen/vitality-physio/media/TESTING-Images/MS4_Testing.xlsx)
+
 Please note this is a .xlsx file and will require excel, google docs or compatiable program to open the file.
 The testing was performed on PC, Tablet and Mobile devices and all tests passed. I have shown in the spreadsheet the tests
 that caused issues and have included notes in relation to these.
