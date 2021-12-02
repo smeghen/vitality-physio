@@ -116,7 +116,7 @@ Below is an image of a small section of this spreadsheet:
 
 ![Testing spreadsheet sample](media/TESTING-Images/manual-testing.JPG "Sample of Testing Spreadsheet")
 
-The full version of the spreadsheet can be downloaded [here.](https://github.com/smeghen/vitality-physio/media/TESTING-Images/MS4_Testing.xlsx)
+The full version of the spreadsheet can be downloaded [here.](https://github.com/smeghen/vitality-physio/blob/main/media/TESTING-Images/MS4_Testing.xlsx)
 
 Please note this is a .xlsx file and will require excel, google docs or compatiable program to open the file.
 The testing was performed on PC, Tablet and Mobile devices and all tests passed. I have shown in the spreadsheet the tests
