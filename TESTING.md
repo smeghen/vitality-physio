@@ -209,6 +209,35 @@ that caused issues and have included notes in relation to these.
 ### Site Owner
 
 
+> I want to be able to add and remove services on offer to ensure the site is up to date.
+
+* When the Site Owner is logged in as a SuperUser they have the option to Add products to the site by navigating to the My Account icon and select the Product Management link. This will bring them to Add Product page were the details of the product can up added.
+
+![Add Product Page](media/TESTING-Images/add-product.JPG "Add Product Page")
+
+> I want to be easily able edit and delete the details, price and images for services.
+
+* When the Site Owner is logged in as a SuperUser the options to Delete or Edit a product become visible on the individual Product Details page. Selecting Delete will delete the Product from the site. Selecting Edit will bring the user to Edit Product page changes can be made.
+
+![Delete Product Page](media/TESTING-Images/delete-product.JPG "Delete Product Page")
+![Edit Product Page](media/TESTING-Images/edit-product.JPG "Edit Product Page")
+
+
+> I want to be able to add, edit and remove blogs on the site.
+
+* When the Site Owner is logged in as a SuperUser the options to Delete or Edit a Blog become visible under the title of individual blogs on the Blogs page. Selecting Delete will delete the Blog from the site. Selecting Edit will bring the user to Edit Blog page changes can be made. To Add Blogs to the site navigate to the My Account icon and select the Blog Management link. This will bring them to Add Blog page were the details of the Blog can up added.
+
+![Blog Page](media/TESTING-Images/blog.JPG "Blog Page")
+![Add Blog Page](media/TESTING-Images/add-blog.JPG "Add Blog Page")
+
+
+> I want to be able to view all contacts made by users
+
+* When the Site Owner is logged in as a SuperUser they have the option to View Contacts to the site by navigating to the My Account icon and select the Contact Management link. This will bring them to View Contacts page were all the contacts will be displayed.
+
+![View Contacts Page](media/TESTING-Images/view-contacts.JPG "View Contacts Page")
+
+
 ---
 
 ## User Testing

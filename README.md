@@ -71,8 +71,8 @@ The idea for this project is all based around a fictional Physiotherapy practice
 
 *Site Owner:*
 
-*	I want to be able to add and remove services on offer to ensure the site is up to date.
-*	I want to be easily able edit the details, price and images for services.
+*	I want to be able to add services on offer to ensure the site is up to date.
+*	I want to be easily able edit and delete the details, price and images for services.
 *   I want to be able to add, edit and remove blogs on the site.
 *   I want to be able to view all contacts made by users
 
