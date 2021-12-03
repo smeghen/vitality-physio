@@ -507,7 +507,26 @@ Once the project has been loaded, run the command
 
 ### Media
 
+The below images were used on the site for the Home Page:
 
+* Dry Needling Photo by Vi Vi on [unsplash.com](https://unsplash.com/s/photos/physiotherapy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* Sports Massage Photo by Toa Heftiba on Unsplash on [unsplash.com](https://unsplash.com/s/photos/sports-massage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* Shockwave Treatment Photo by THESSALONIKI, Greece on [www.istockphoto.com](https://www.istockphoto.com/photo/physical-therapy-of-the-knee-and-the-foot-with-shock-wave-gm937415304-256409291)
+
+* Sports Injury Photo by Annie Spratt on [unsplash.com](https://unsplash.com/s/photos/physiotherapy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* Neck pain Photo by Karolina Grabowska on [Pexels](https://www.pexels.com/photo/professional-massage-therapist-treating-a-female-patient-s-injured-neck-4506214/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
+
+* Manual Therapy Photo by Toralf Thomassen on [unsplash.com](https://unsplash.com/s/photos/physiotherapy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* Physiotherapist Photo by Evelina Zhu on [Pexels](https://www.pexels.com/photo/smiling-woman-with-document-at-doctor-office-5434019/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
+
+
+The below images were used on the site for the site Products:
+
+* 
 
 
 
