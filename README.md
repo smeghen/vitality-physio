@@ -526,8 +526,11 @@ The below images were used on the site for the Home Page:
 
 The below images were used on the site for the site Products:
 
-* 
+* Online yoga Photo by Marta Wave on [Pexels](https://www.pexels.com/photo/flexible-anonymous-woman-practicing-uttanasana-at-home-6453407/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
 
+* Online Physio Session Photo by Samantha Borges on [unsplash.com](https://images.unsplash.com/photo-1588702547954-4800ead296ef?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80)
+
+* Online Pilates Photo by Marta Wave on [Pexels](https://www.pexels.com/photo/unrecognizable-woman-practicing-kumbhakasana-posture-6453396/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
 
 
   
