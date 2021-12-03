@@ -89,19 +89,94 @@ Below is a Site diagram that I used as a basis for the structure of the project:
 
 Django works with SQL databases and I utilised SQLite in the development envirnoment, and PostgreSQL database on Heruko for the deployed site.
 
-Below is the database schema that I devised for the project:
 
-##### Products App:
+### User Model
 
-Category model
+The User model utilized for this project is the standard one provided by `django.contrib.auth.models`
 
-**Name**|**Database Key**|**Field Type**|**Type Validation**
-:-----:|:-----:|:-----:|:-----:
-**Name**|**name**|**CharField**|**max\_length=254**
+### Profiles App
 
-![Database Schema]( "Database Schema")
+| Name | Database Key | Field Type | Type Validation |
+| :-------------: |:----------------:| :--------------: | :---------: |
+|User | user |	OneToOneField 'User'| on_delete=models.CASCADE
+|Default Street Address1 | default_street_address1 | CharField | max_length=80, null=True, blank=True
+|Default Street Address2 | default_street_address2 | CharField | max_length=80, null=True, blank=True
+|Default Town or City | default_town_or_city | CharField | max_length=40, null=True, blank=True
+|Default County | default_county | CharField | max_length=80, null=True, blank=True
+|Default Postcode | default_postcode | CharField | max_length=20, null=True, blank=True
+|Default Phone Number |	default_phone_number | CharField | max_length=20, null=True, blank=True
 
 
+### Products App
+
+`Category` model
+
+| Name | Database Key | Field Type | Type Validation |
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Name | name | CharField | max_length=254
+
+
+`Product` model
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Category | category | 'Catergory', null=True, blank=True, on_delete=models.SET_NULL| ForeignKey
+|Product id | id | primary_key=True | AutoField
+|Name | name | max_length=254 | CharField
+|SKU | sku | max_length=254, null=True, blank=True | CharField
+|Description | content | blank=False | TextField
+|Price | price | max_digits=6, decimal_places=2 | DecimalField
+|Image| image| blank=False | ImageField
+
+
+
+### Blog App
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Author | author | max_length=80, null=True, blank=False | CharField
+|Subject | subject | max_length=255, null=True, blank=False | CharField
+|Content | content | max_length=2000, null=True, blank=False | TextField
+
+### Contact App
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Email | email | max_length=80, null=True, blank=False | EmailField
+|Subject | subject | max_length=255, null=True, blank=False | CharField
+|Message | messaage | max_length=1500, null=True, blank=False | TextField
+
+### Checkout App
+
+`Order` model
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Order Number | order_number | (max_length=32, null=False, editable=False | CharField
+|User Profile | user_profile | UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders' | ForeignKey(User)
+|Full name | full_name | max_length=50, null=False, blank=False | CharField
+|Phone number | phone_number | max_length=20, null=False, blank=False | CharField
+|Postcode | postcode| max_length=20, null=True, blank=True | CharField
+|Town or City | town_or_city | max_length=40, null=False, blank=False | CharField
+|Street address 1 | street_address1 | max_length=80, null=False, blank=False| CharField
+|Street address 2 | street_address2 | max_length=80, null=True, blank=True | CharField
+|County | county | max_length=40, blank=False | CharField
+|Date | date | auto_now_add=True | DateTimeField
+|Order Total | order_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
+|Discount | discount | max_digits=2, decimal_places=2, null=False, default=0 | DecimalField
+|Grand Total | grand_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
+|Original Cart | original_cart |null=False, blank=False, default='' | TextField
+|Stripe PID | stripe_pid | max_length=254,null=False, blank=False, default='' | CharField
+
+
+`OrderLineItem` model
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Order | order | Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'| ForeignKey
+|Product | product | Product, null=False, blank=False, on_delete=models.CASCADE | ForeignKey
+|Quantity | quantity |  null=False, blank=False, default=0 | IntegerField
+|Line Item Total | lineitem_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=False | DecimalField
 
 ## Design:
 
