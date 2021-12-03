@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">  
+                <h2 class="logo-font my-4 text-center">Ooops! Something when wrong.</h2>
+                <a href="{% url 'home' %}" class="btn btn-primary rounded-5 mt-5">
+                    <span class="text-uppercase">Let's go Back</span>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
