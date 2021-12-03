@@ -43,6 +43,12 @@ The idea for this project is all based around a fictional Physiotherapy practice
 
 
 ---
+
+### Project Goals
+
+The primary goal of this project is to create a functioning site for a Physiotherpy Clinic, with the emphasis on the e-commerce side of the business. The products and services of the business are showcased and available to purchase online. Users are able to register and maintain their details, view their purchase history and have access to site blogs. Unregistered users are able to navigate the site and make purchases and all users have the ability to contact the company with any queries they have. For the business owner this site gives them an opportunity to have an online presence, pre-sell proucts and services and have lines of communication open to current and potential clients. There are other aspects of the business that are touched on, and with time and real world clients could be bulked out to create a robust commerical site.
+
+
 ### User Experience (UX)
 
 #### User Stories:
