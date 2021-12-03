@@ -223,13 +223,13 @@ for the site. These were created using [Balsamiq](https://balsamiq.com//).
 ### Differences to Design
 
 * During development and testing I found that the use of a hero image was not adequately able to convey the purpose of the site. The images that I was using were not able to capture the nature of the 
-business of a Phyiotherapy practice, so I decided to incorporate text aloong side an image to better aid first time users understanding the purpose of the site. I thought this was especially important for smaller screen
+business of a Phyiotherapy practice, so I decided to incorporate text along side an image to better aid first time users understanding the purpose of the site. I thought this was especially important for smaller screen
 sizes, where a user would need to scroll down before finding any details on what the site is about.
 
 
 ## Site Features
 
-Each page of the site has a responsive navbar contains the company logo on the top left and links to Account access and Shopping Cart on the right. There is also a simple Footer on each page with links to social media and copyright information.
+Each page of the site has a responsive navbar which contains the company logo on the top left and links to Account access and Shopping Cart on the right. There is also a simple Footer on each page with links to social media and copyright information.
 
 The navigation links of the navbar are for Products, Treatments, Classes and Contact Us, with the Blog link only visible to Registered Users.
 
@@ -517,7 +517,7 @@ Once the project has been loaded, run the command
 
 
 * The Boutique Ado walk through project by Code Institute was used as an excellent starting point for this project. Much of the structure of the project was based around this and was adapted, 
-modified and expanded to suit the functionality of the porject.
+modified and expanded to suit the functionality of the project.
 
 * Code for scrolling content of bootstrap card found on Stackoverflow and modified to meet my needs: https://stackoverflow.com/questions/49818715/scrollable-card-bootstrap
 
