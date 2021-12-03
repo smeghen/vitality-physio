@@ -187,7 +187,8 @@ The colour scheme for the site consists of red, white and light grey. The red wi
 
 #### Imagery:
 
- 
+I have used a range of images for this project that I have sourced from Pixel, Unsplash and iStockPhoto. Ideally for a real business it would be better to use actual pictures of
+staff, classes, treatments and facilities, but these can always be added at a later date. The images I used I tried to select ones that best convey the clinical nature of the business and also are easily associated with the products and services that they are related too.
 
 
 #### Wireframes:
